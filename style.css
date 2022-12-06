@@ -91,32 +91,43 @@ header button {
 
 footer {
   background-color: #553F3F;
-  padding: 50px;
+}
+footer a {
+  text-decoration: none;
+  color: #E5DBD9;
 }
 
 .footer_title {
   text-align: center;
   color: #E5DBD9;
   font-family: "Berkshire Swash";
-  font-size: 50px;
-}
-
-.footer_div {
-  display: flex;
-  flex-direction: row;
-  padding: 30px;
+  font-size: 40px;
+  padding-top: 20px;
 }
 
 .footer_title_div {
-  color: #E5DBD9;
-  padding-bottom: 25px;
   text-transform: uppercase;
-  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "Inter";
+}
+
+.footer_div {
+  color: #E5DBD9;
+  margin-left: 20px;
+}
+.footer_div li {
+  list-style-type: none;
+}
+.footer_div p {
+  font-family: "Inter";
 }
 
 .copyright {
   text-align: center;
   color: #E5DBD9;
+  font-size: 15px;
+  padding-top: 20px;
 }
 
 @media screen and (min-width: 375px) {
@@ -147,5 +158,34 @@ footer {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 4px;
+  }
+  footer {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  .footer_div {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+  }
+  .footer_div div {
+    max-width: 300px;
+    margin: 40px;
+    margin-top: 0;
+  }
+  .footer_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer_title_div {
+    color: #E5DBD9;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: "Abril Fatface";
+  }
+  .copyright {
+    color: #E5DBD9;
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

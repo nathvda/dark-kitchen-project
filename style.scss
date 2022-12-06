@@ -124,37 +124,51 @@ header
 
 
 // Footer
-
-// Version Ordinateur
 footer{
     background-color: $chocolate--color;
-    padding: 50px;
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
 }
 
 .footer_title{
     text-align: center;
     color: $white;
     font-family: $titres;
-    font-size: 50px;
-}
-
-.footer_div{
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
+    font-size: 40px;
+    padding-top: 20px;
 }
 
 .footer_title_div{
-    color: $white;
-    padding-bottom: 25px;
     text-transform: uppercase;
-    margin: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: $general;
+}
+
+.footer_div{
+    color: $white;
+    margin-left: 20px;
+
+    li{
+        list-style-type: none;
+    }
+
+    p{
+        font-family: $general;
+    }
 }
 
 .copyright{
     text-align: center;
     color: $white;
+    font-size: 15px;
+    padding-top: 20px;
 }
+
+
 
 @media screen and (min-width:375px){
 
@@ -192,4 +206,42 @@ footer{
     }
 }
     
+// Footer
+
+footer{
+    padding-bottom: 20px;
+    padding-top: 30px;
+
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+
+    div{
+        max-width: 300px;
+        margin: 40px;
+        margin-top: 0;
+    }
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer_title_div{
+    color: $white;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: $menus;
+}
+
+.copyright{
+    color: $white;
+    font-size: 20px;
+} 
+
 }
