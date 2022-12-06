@@ -9,9 +9,178 @@ $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
 
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+}
+
 body{
     font-size:18px;
+    font-family:$general;
+    background-color:$white;
+}
+
+main {
+            h2{
+            color:$chocolate--color;
+            font-family:$titres;
+            font-size:2em;
+        }
+}
+
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:2em;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        height:min-content;
+
+       li{
+
+        margin-bottom:2em;
+        
+            img{
+                height:40vw;
+                width:50vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
 }
 
 // Footer
+footer{
+    background-color: $chocolate--color;
 
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.footer_title{
+    text-align: center;
+    color: $white;
+    font-family: $titres;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.footer_title_div{
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: $general;
+}
+
+.footer_div{
+    color: $white;
+    margin-left: 20px;
+
+    li{
+        list-style-type: none;
+    }
+
+    p{
+        font-family: $general;
+    }
+}
+
+.copyright{
+    text-align: center;
+    color: $white;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+
+
+@media screen and (min-width:375px){
+
+    
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:3em;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        height:min-content;
+        grid-gap:1em;
+
+       li{
+
+        margin-bottom:2em;
+        
+            img{
+                height:20vw;
+                width:25vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
+}
+    
+// Footer
+
+footer{
+    padding-bottom: 20px;
+    padding-top: 30px;
+
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+
+    div{
+        max-width: 300px;
+        margin: 40px;
+        margin-top: 0;
+    }
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer_title_div{
+    color: $white;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: $menus;
+}
+
+.copyright{
+    color: $white;
+    font-size: 20px;
+} 
+
+}
