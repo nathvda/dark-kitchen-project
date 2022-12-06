@@ -12,10 +12,52 @@ $general : "Inter";
 *{
     margin: 0;
     padding: 0;
+    list-style-type:none;
 }
 
 body{
     font-size:18px;
+    font-family:$general;
+    background-color:$white;
+}
+
+main {
+            h2{
+            color:$chocolate--color;
+            font-family:$titres;
+            font-size:2em;
+        }
+}
+
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:2em;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        height:68em;
+
+       li{
+        
+            img{
+                height:40vw;
+                width:50vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
 }
 
 // Footer

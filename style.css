@@ -1,10 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
 * {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 body {
   font-size: 18px;
+  font-family: "Inter";
+  background-color: #E5DBD9;
+}
+
+main h2 {
+  color: #553F3F;
+  font-family: "Berkshire Swash";
+  font-size: 2em;
+}
+
+#block__Engagements {
+  padding: 0.5em;
+}
+#block__Engagements h3 {
+  color: #553F3F;
+  font-family: "Berkshire Swash";
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+#block__Engagements ul {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 68em;
+}
+#block__Engagements ul li img {
+  height: 40vw;
+  width: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
 }
 
 footer {
