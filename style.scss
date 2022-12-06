@@ -19,9 +19,54 @@ body{
 }
 
 // Footer
+footer{
+    background-color: $chocolate--color;
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.footer_title{
+    text-align: center;
+    color: $white;
+    font-family: $titres;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.footer_title_div{
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: $general;
+}
+
+.footer_div{
+    color: $white;
+    margin-left: 20px;
+
+    li{
+        list-style-type: none;
+    }
+
+    p{
+        font-family: $general;
+    }
+}
+
+.copyright{
+    text-align: center;
+    color: $white;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+
 
 // Version Ordinateur
-footer{
+/* footer{
     background-color: $chocolate--color;
     padding: 50px;
     padding-bottom: 20px;
@@ -71,4 +116,4 @@ footer{
     text-align: center;
     color: $white;
     font-size: 20px;
-}
+} */
