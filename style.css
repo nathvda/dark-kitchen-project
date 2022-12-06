@@ -1,3 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 18px;
+}
+
+footer {
+  background-color: #553F3F;
+  padding: 50px;
+}
+
+.footer_title {
+  text-align: center;
+  color: #E5DBD9;
+  font-family: "Berkshire Swash";
+  font-size: 50px;
+}
+
+.footer_div {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.footer_title_div {
+  color: #E5DBD9;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.copyright {
+  text-align: center;
+  color: #E5DBD9;
 }/*# sourceMappingURL=style.css.map */
