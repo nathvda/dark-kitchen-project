@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -48,34 +49,96 @@ main h2 {
 
 footer {
   background-color: #553F3F;
-  padding: 50px;
+}
+footer a {
+  text-decoration: none;
+  color: #E5DBD9;
 }
 
 .footer_title {
   text-align: center;
   color: #E5DBD9;
   font-family: "Berkshire Swash";
-  font-size: 50px;
-}
-
-.footer_div {
-  display: flex;
-  flex-direction: row;
-  padding: 30px;
+  font-size: 40px;
+  padding-top: 20px;
 }
 
 .footer_title_div {
-  color: #E5DBD9;
-  padding-bottom: 25px;
   text-transform: uppercase;
-  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "Inter";
+}
+
+.footer_div {
+  color: #E5DBD9;
+  margin-left: 20px;
+}
+.footer_div li {
+  list-style-type: none;
+}
+.footer_div p {
+  font-family: "Inter";
 }
 
 .copyright {
   text-align: center;
   color: #E5DBD9;
+  font-size: 15px;
+  padding-top: 20px;
 }
 
+/* footer{
+    background-color: $chocolate--color;
+    padding: 50px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.footer_title{
+    text-align: center;
+    color: $white;
+    font-family: $titres;
+    font-size: 50px;
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+
+    div{
+        max-width: 300px;
+        margin: 40px;
+        margin-top: 0;
+    }
+
+    p, li{
+        color: $white;
+        font-weight: $general;
+        list-style-type: none;
+        padding: 10px;
+    }
+}
+
+.footer_title_div{
+    color: $white;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    margin: 20px;
+    font-weight: $menus;
+}
+
+.copyright{
+    text-align: center;
+    color: $white;
+    font-size: 20px;
+} */
 @media screen and (min-width: 375px) {
   #block__Engagements {
     padding: 0.5em;
