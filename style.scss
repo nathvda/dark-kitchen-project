@@ -76,12 +76,21 @@ header
         color: $chocolate--color;
         text-align: center;
     }
-    .header
+    .navbar
     {
+        position: absolute;
+        margin: 50px;
         display: flex;
+        justify-content: space-between;
+        font-family: $menus;
         visibility: hidden;
 
-        ul{
+        & a{
+            color: $chocolate--color;
+        }
+
+        ul
+        {
             list-style-type: none;
         }
     }
@@ -96,6 +105,7 @@ header
     {   
         width: 15vw;
         display: flex;
+        
 
     }
     

@@ -59,11 +59,18 @@ header h1 {
   color: #553F3F;
   text-align: center;
 }
-header .header {
+header .navbar {
+  position: absolute;
+  margin: 50px;
   display: flex;
+  justify-content: space-between;
+  font-family: "Abril Fatface";
   visibility: hidden;
 }
-header .header ul {
+header .navbar a {
+  color: #553F3F;
+}
+header .navbar ul {
   list-style-type: none;
 }
 header .caddie {
