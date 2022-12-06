@@ -4,7 +4,6 @@ $coffee--color: #937666;
 $accent : #DE3D3D ;
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap');
-
 $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
@@ -17,6 +16,58 @@ $general : "Inter";
 body{
     font-size:18px;
 }
+//header
+header
+{   
+    background-image: url(assets/jr-r-90HdOlGbjck-unsplash.jpg);
+    background-color: $white;
+    background-blend-mode:soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    h1
+    {
+        font-family: $titres;
+        color: $chocolate--color;
+        text-align: center;
+    }
+    .header
+    {
+        display: flex;
+        visibility: hidden;
+
+        ul{
+            list-style-type: none;
+        }
+    }
+    .caddie
+    {
+            width:10vw;
+            visibility: hidden;
+
+    }
+
+    .hamburger
+    {   
+        width: 15vw;
+        display: flex;
+
+    }
+    
+    .header__nav{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    button
+    {
+        visibility: hidden;
+    }
+}
+        
+
+
 
 // Footer
 
