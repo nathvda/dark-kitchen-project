@@ -3,9 +3,16 @@ $chocolate--color : #553F3F;
 $coffee--color: #937666;
 $accent : #DE3D3D ;
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap');
+
 $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
+
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     font-size:18px;
@@ -13,3 +20,33 @@ body{
 
 // Footer
 
+// Version Ordinateur
+footer{
+    background-color: $chocolate--color;
+    padding: 50px;
+}
+
+.footer_title{
+    text-align: center;
+    color: $white;
+    font-family: $titres;
+    font-size: 50px;
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.footer_title_div{
+    color: $white;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.copyright{
+    text-align: center;
+    color: $white;
+}
