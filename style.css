@@ -31,7 +31,12 @@ main h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 68em;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+#block__Engagements ul li {
+  margin-bottom: 2em;
 }
 #block__Engagements ul li img {
   height: 40vw;

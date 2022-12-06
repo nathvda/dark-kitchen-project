@@ -46,9 +46,11 @@ main {
         display:flex;
         flex-direction:column;
         justify-content:space-between;
-        height:68em;
+        height:min-content;
 
        li{
+
+        margin-bottom:2em;
         
             img{
                 height:40vw;
