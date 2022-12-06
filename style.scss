@@ -12,10 +12,54 @@ $general : "Inter";
 *{
     margin: 0;
     padding: 0;
+    list-style-type:none;
 }
 
 body{
     font-size:18px;
+    font-family:$general;
+    background-color:$white;
+}
+
+main {
+            h2{
+            color:$chocolate--color;
+            font-family:$titres;
+            font-size:2em;
+        }
+}
+
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:2em;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        height:min-content;
+
+       li{
+
+        margin-bottom:2em;
+        
+            img{
+                height:40vw;
+                width:50vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
 }
 
 // Footer
@@ -49,4 +93,42 @@ footer{
 .copyright{
     text-align: center;
     color: $white;
+}
+
+@media screen and (min-width:375px){
+
+    
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:3em;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        height:min-content;
+        grid-gap:1em;
+
+       li{
+
+        margin-bottom:2em;
+        
+            img{
+                height:20vw;
+                width:25vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
+}
+    
 }
