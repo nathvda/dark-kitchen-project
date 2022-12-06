@@ -98,5 +98,37 @@ footer{
 @media screen and (min-width:375px){
 
     
+#block__Engagements{
+
+    padding:.5em;
+
+    h3{
+        color:$chocolate--color;
+        font-family:$titres;
+        font-size:1.5em;
+        padding:.5em 0;
+
+    }
+
+    ul{
+        padding:3em;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        height:min-content;
+        grid-gap:1em;
+
+       li{
+
+        margin-bottom:2em;
+        
+            img{
+                height:20vw;
+                width:25vw;
+                object-fit:cover;
+                border-radius:4px;
+            };
+     }
+    }
+}
     
 }
