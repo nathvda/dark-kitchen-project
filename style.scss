@@ -17,6 +17,31 @@ $general : "Inter";
 body{
     font-size:18px;
 }
+//Qui sommes-nous
+
+
+//bouton "Commander"
+.bouton{
+    background-color: #DE3D3D;
+    border: none;
+    border-radius : 40px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.5em;
+    a {
+        color:white;
+        font-family: $menus;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+.qui{
+    margin : auto;
+    &__logo{
+        width : 150px;
+    }
+}
 
 // Footer
 
