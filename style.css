@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 18px;
+}
+
+footer {
+  background-color: #553F3F;
+  padding: 50px;
+}
+
+.footer_title {
+  text-align: center;
+  color: #E5DBD9;
+  font-family: "Berkshire Swash";
 }/*# sourceMappingURL=style.css.map */

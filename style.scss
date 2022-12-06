@@ -7,9 +7,24 @@ $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-size:18px;
 }
 
 // Footer
+footer{
+    background-color: $chocolate--color;
+    padding: 50px;
+}
+
+.footer_title{
+    text-align: center;
+    color: $white;
+    font-family: $titres;
+}
 
