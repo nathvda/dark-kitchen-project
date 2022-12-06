@@ -41,10 +41,24 @@
         </article>
 
         <article id="block__Commande">
-            <div class="patisseries__wrapper">
-                <!-- CONTENU DYNAMIQUE-->
+            <h2>Passer commande</h2>
+            <div class="patisserie_filters">
+                <label for="chocolat">Chocolat</label>
+                <input id="chocolat" name="patisserie" type="radio" value="chocolat">
+                <label for="fruits">Aux fruits</label>
+                <input id="fruits" name="patisserie" type="radio" value="fruits">
+                <label for="gluten">Sans gluten</label>
+                <input id="gluten" name="patisserie" type="radio" value="gluten">
+                <label for="lactose">Sans lactose</label>
+                <input id="lactose" name="patisserie" type="radio" value="lactose">
             </div>
+            <div class="patisseries__wrapper">
+                <!-- CONTENU DYNAMIQUE -->
+            </div>   
             <div class="patisseries__commande">
+                <div id="patisseries__cartPreview">
+                    <!-- CONTENU DYNAMIQUE -->
+                </div>
                 <button>Commander</button>
             </div>
         </article>
