@@ -16,4 +16,23 @@ footer {
   text-align: center;
   color: #E5DBD9;
   font-family: "Berkshire Swash";
+  font-size: 50px;
+}
+
+.footer_div {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.footer_title_div {
+  color: #E5DBD9;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.copyright {
+  text-align: center;
+  color: #E5DBD9;
 }/*# sourceMappingURL=style.css.map */
