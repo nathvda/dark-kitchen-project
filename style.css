@@ -8,11 +8,37 @@ body {
   font-size: 18px;
 }
 
+.qui {
+  text-align: center;
+  padding: 0.5em;
+}
+.qui__logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+}
+.qui__logo img {
+  margin: 25px;
+  width: 150px;
+  display: block;
+}
+.qui__titre {
+  text-align: left;
+  font-family: "Berkshire Swash";
+}
+.qui__contenu {
+  padding: 2em;
+  text-align: left;
+  font-family: "Inter";
+}
+
 .bouton {
   background-color: #DE3D3D;
   border: none;
   border-radius: 40px;
-  padding: 15px 30px;
+  padding: 15px 35px;
+  margin: 15px;
   text-align: center;
   font-size: 1.5em;
 }
@@ -21,13 +47,6 @@ body {
   font-family: "Abril Fatface";
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.qui {
-  margin: auto;
-}
-.qui__logo {
-  width: 150px;
 }
 
 footer {
@@ -58,4 +77,11 @@ footer {
 .copyright {
   text-align: center;
   color: #E5DBD9;
+}
+
+@media screen and (min-width: 1024px) {
+  .qui {
+    display: flex;
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */
