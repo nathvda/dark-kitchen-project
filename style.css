@@ -46,6 +46,49 @@ main h2 {
   border-radius: 4px;
 }
 
+header {
+  background-image: url(assets/jr-r-90HdOlGbjck-unsplash.jpg);
+  background-color: #E5DBD9;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header h1 {
+  font-family: "Berkshire Swash";
+  color: #553F3F;
+  text-align: center;
+}
+header .navbar {
+  position: absolute;
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Abril Fatface";
+  visibility: hidden;
+}
+header .navbar a {
+  color: #553F3F;
+}
+header .navbar ul {
+  list-style-type: none;
+}
+header .caddie {
+  width: 10vw;
+  visibility: hidden;
+}
+header .hamburger {
+  width: 15vw;
+  display: flex;
+}
+header .header__nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+header button {
+  visibility: hidden;
+}
+
 footer {
   background-color: #553F3F;
 }
