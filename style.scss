@@ -24,6 +24,13 @@ body{
 footer{
     background-color: $chocolate--color;
     padding: 50px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
 }
 
 .footer_title{
@@ -37,6 +44,19 @@ footer{
     display: flex;
     flex-direction: row;
     padding: 30px;
+
+    div{
+        max-width: 300px;
+        margin: 40px;
+        margin-top: 0;
+    }
+
+    p, li{
+        color: $white;
+        font-weight: $general;
+        list-style-type: none;
+        padding: 10px;
+    }
 }
 
 .footer_title_div{
@@ -44,9 +64,11 @@ footer{
     padding-bottom: 25px;
     text-transform: uppercase;
     margin: 20px;
+    font-weight: $menus;
 }
 
 .copyright{
     text-align: center;
     color: $white;
+    font-size: 20px;
 }
