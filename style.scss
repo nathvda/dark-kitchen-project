@@ -25,6 +25,7 @@ main {
             color:$chocolate--color;
             font-family:$titres;
             font-size:2em;
+            padding:0.5em 0.5em;
         }
 }
 
@@ -345,23 +346,28 @@ header {
 
 }
 
+main{
 
+   
+    padding:4em;
+    
+}
 
 
 #block__Engagements{
 
     padding:.5em;
+    box-sizing:border-box;
 
     h3{
         color:$chocolate--color;
         font-family:$titres;
         font-size:1.5em;
         padding:.5em 0;
-
     }
 
     ul{
-        padding:3em;
+        padding:.5em;
         display:grid;
         grid-template-columns: repeat(3,1fr);
         height:min-content;

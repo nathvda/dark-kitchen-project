@@ -15,6 +15,7 @@ main h2 {
   color: #553F3F;
   font-family: "Berkshire Swash";
   font-size: 2em;
+  padding: 0.5em 0.5em;
 }
 
 #block__Engagements {
@@ -260,8 +261,12 @@ footer a {
        object-fit: cover;
     visibility: visible;
   }
+  body main {
+    padding: 4em;
+  }
   body #block__Engagements {
     padding: 0.5em;
+    box-sizing: border-box;
   }
   body #block__Engagements h3 {
     color: #553F3F;
@@ -270,7 +275,7 @@ footer a {
     padding: 0.5em 0;
   }
   body #block__Engagements ul {
-    padding: 3em;
+    padding: 0.5em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: -webkit-min-content;
