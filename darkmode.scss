@@ -158,22 +158,22 @@ header
     left:54em;
     visibility:visible;
     flex: none;
-    width: 55px;
-    height: 26px;
     display: inline-block;
     background: #0f1224;
     border: 1px solid black;
     box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
-    border-radius: 100px;
+    border-radius: 2em;
     transition: background .3s;
 }
 
 .darkmode:before{
     content: url(./assets/moon.svg);
+    background-color: rgba(255, 255, 255, 0.438);
     height:2em;
     width:2em;
     position: absolute;
-    top: 3px;
+    top: 0.3em;
+    border-radius: 2em;
 
 }
 //Qui sommes-nous

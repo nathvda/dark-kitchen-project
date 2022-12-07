@@ -102,14 +102,17 @@ header .darkmode {
   top: 3em;
   left: 54em;
   visibility: visible;
+  transition: background 0.3s;
 }
 header .darkmode:before {
   content: url(./assets/brightness-high.svg);
+  border-radius: 2em;
+  border-radius: 2em;
   height: 2em;
   width: 2em;
   position: absolute;
-  top: 5px;
-  right: 25px;
+  top: 0.3em;
+  right: 1.9em;
 }
 header .hamburgermenu:focus + .navbar {
   visibility: visible;
