@@ -192,7 +192,7 @@ padding:0.5em;
 }
 
 .patisseries__commande{
-    background-color:#efefef;
+    background-color:rgb(197, 184, 184);
 }
 
 .patisseries__wrapper{
@@ -205,6 +205,38 @@ padding:0.5em;
 
 .hidePastry{
     display:none;
+}
+
+//Panier
+.panier{
+    font-family: $titres;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.patisseries__commande{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+.button{
+    background-color: #DE3D3D;
+    border: none;
+    border-radius : 40px;
+    padding: 15px 35px;
+    margin : 15px;
+    text-align: center;
+    font-size: 0.9em;
+    a {
+        color:white;
+        font-family: $menus;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
 }
 
 // Footer
