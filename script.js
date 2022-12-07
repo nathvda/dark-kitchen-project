@@ -15,6 +15,38 @@ function filterPastries() {
         el.classList.add("hidePastry");
     }
 }
+
+displayInCart();
+}
+
+function displayInCart() {
+    let panierDis = document.getElementById('patisseries__cartPreview');
+    
+    // Ligne
+    let panierItem = document.createElement("li");
+    let panierItemText = document.createTextNode("Gateau");
+    
+    // Prix
+    let panierButton = document.createElement("div");
+    let panierButtonText = document.createTextNode("Prix");
+
+    // Bouton
+    let panierPrice = document.createElement("button");
+    let panierPriceText = document.createTextNode("-");
+
+    panierItem.classList.add("LignePanier");
+    panierButton.classList.add("Enlever");
+    panierPrice.classList.add("Prix");
+
+    panierButton.setAttribute("type", "button");
+
+    panierItem.appendChild(panierItemText);
+    panierPrice.appendChild(panierPriceText);
+    panierButton.appendChild(panierButtonText);
+
+    panierItem.appendChild(panierPrice);
+    panierItem.appendChild(panierButton);
+    panierDis.appendChild(panierItem);
 }
 
 let filtreswrap = document.querySelector('.patisserie_filters');
