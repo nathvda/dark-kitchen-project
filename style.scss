@@ -18,6 +18,8 @@ body{
     font-size:18px;
     font-family:$general;
     background-color:$white;
+    overflow-x:hidden;
+    width:100vw;
 }
 
 main {
@@ -25,6 +27,7 @@ main {
             color:$chocolate--color;
             font-family:$titres;
             font-size:2em;
+            padding:0.5em 0.5em;
         }
 }
 
@@ -86,10 +89,25 @@ header
         display: flex;
         justify-content: space-between;
         font-family: $menus;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: all .50s ease;
+        background-color: rgba(255, 255, 255, 0.699);
         visibility: hidden;
 
         & a{
             color: $chocolate--color;
+            display: block;
+            margin: 12px 0;
+            padding: 0 25px;
+            transition: all .50s ease;
+        }
+
+        & a:hover
+        {
+            color: #937666;
+            transform: translateY(5px)
+
         }
 
         ul
@@ -97,6 +115,11 @@ header
             list-style-type: none;
         }
     }
+   
+  .hamburgermenu:focus + .navbar{
+    visibility: visible;;
+  }
+   
     .caddie
     {
             width:10vw;
@@ -150,7 +173,7 @@ header
 
 //bouton "Commander"
 .bouton{
-    background-color: #DE3D3D;
+    background-color: $accent;
     border: none;
     border-radius : 40px;
     padding: 15px 35px;
@@ -284,25 +307,118 @@ footer{
     padding-top: 20px;
 }
 
+@media screen and (min-width:900px){
 
+    body {
+scroll-behavior: smooth;
 
-@media screen and (min-width:375px){
+.hamburgermenu{
+    display: none;
+}
 
+header {  
+
+    height:50vh;
+    position:relative;
+
+    h1{
+        position:absolute;
+        bottom:1rem;
+        left:2em;
+        font-size:7vw;
+    }
+
+    button{
+        position:absolute;
+        bottom:1rem;
+        visibility:visible;
+        right:2em;
+    }
     
+    .navbar{
+        display: flex;
+        position:absolute;
+        margin:0;
+        top:1em;
+        left:2em;
+        right:2em;
+        justify-content: space-between;
+        font-family: $menus;
+        flex-direction: row;
+        border-radius: 10px;
+        visibility: visible;
+        background:none;
+
+        & a{
+            color: $chocolate--color;
+            display: block;
+            margin: 12px 0;
+            padding: 0 25px;
+            transition: all .50s ease;
+            text-decoration:none;
+            font-size:25px;
+        }
+
+        & a:hover
+        {
+            color: #937666;
+            transform: translateY(0px);
+
+        }
+
+        ul
+        {
+            list-style-type: none;
+            display:flex;
+            width:97vw;
+            box-sizing:border-box;
+
+            li:first-of-type{
+                background-color:$white;
+                border-radius:100px;
+            }
+
+            li:last-of-type{ 
+
+                margin-left:auto;
+
+                .caddie
+                {
+                    width:3.5rem;
+                    height:3.5rem;
+                    object-fit:cover;
+                    visibility: visible;
+
+                }
+            }
+        }
+
+    }
+
+}
+
+main{
+
+   
+    padding:0.5em 4em;
+
+}
+
+
 #block__Engagements{
 
     padding:.5em;
+    box-sizing:border-box;
 
     h3{
         color:$chocolate--color;
         font-family:$titres;
         font-size:1.5em;
         padding:.5em 0;
-
     }
 
     ul{
-        padding:3em;
+        padding:.5em;
         display:grid;
         grid-template-columns: repeat(3,1fr);
         height:min-content;
@@ -328,7 +444,6 @@ footer{
 footer{
     padding-bottom: 20px;
     padding-top: 30px;
-
 }
 
 .footer_div{
@@ -361,15 +476,13 @@ footer{
     font-size: 20px;
 } 
 
-}
 
-//A rajouter dans les media queries 
-@media screen and (min-width:1024px){
 
+// Media queries qui sommes-nous?
 .qui{
     display:flex;
     text-align:left;
 }  
-    
-}
 
+}
+}
