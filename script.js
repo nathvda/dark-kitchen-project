@@ -1,36 +1,24 @@
 // Filtre les patisseries
-function filterPastries(){
+function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
-<<<<<<< HEAD
     console.log(filtresPatisserie);
     let itemsToHide =  document.querySelectorAll(`.${filtresPatisserie}`);
     console.log(itemsToHide);
-=======
-    let patisserieMenu = document.querySelector(`.patisseries__wrapper`);
-    let itemsToHide =  patisserieMenu.querySelectorAll(`div`);
-
->>>>>>> a2f276a (Removing console logs)
     for (el of itemsToHide){
-        el.classList.toggle('hidePastry');
+        
+       if (el.classList.contains(`${filtresPatisserie}`) || (filtresPatisserie === "")){
+
+        el.classList.remove("hidePastry");
+
+       } else {
+
+        el.classList.add("hidePastry");
     }
 }
-
-<<<<<<< HEAD
-let filtreswrap = document.getElementById('patisserie_filters');
-console.log(filtreswrap);
-
-=======
 }
 
-let filtreswrap = document.querySelector('.patisserie_filters');
-
-// Déclenche les filtres
-filtreswrap.addEventListener('change', filterPastries);
-
->>>>>>> a2f276a (Removing console logs)
-
-
-
+let filtreswrap = document.getElementById('patisserie_filters');
+console.log(filtreswrap);
 
 /*
 <article id="block__Commande">
