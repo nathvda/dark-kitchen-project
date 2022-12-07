@@ -111,26 +111,35 @@ header button {
   visibility: hidden;
 }
 
-.darkmode {
-  display: block;
+.lightmode {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-color: #A16A40;
   border: 0;
-  border-radius: 2em;
   height: 2em;
   width: 4em;
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: 3em;
+  left: 54em;
   visibility: visible;
+  flex: none;
+  width: 55px;
+  height: 26px;
+  display: inline-block;
+  background: #0f1224;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
+  border-radius: 100px;
+  transition: background 0.3s;
 }
 
-.darkmode:before {
-  content: "\f1d2";
+.lightmode:before {
+  content: url(./assets/moon.svg);
   height: 2em;
   width: 2em;
+  position: absolute;
+  top: 3px;
 }
 
 .qui {

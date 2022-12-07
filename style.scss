@@ -126,18 +126,19 @@ header
         height:2em;
         width:4em;
         position:absolute;
-        top:1em;
-        left:1em;
+        top:3em;
+        left:54em;
         visibility:visible;
     }
 
     .darkmode:before{
-        content:"•";
+        content:url(./assets/brightness-high.svg);
         height:2em;
         width:2em;
-        
-
-
+        position: absolute;
+        top: 5px;
+        right: 25px;
+    
     }
    
   .hamburgermenu:focus + .navbar{
