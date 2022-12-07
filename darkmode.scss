@@ -1,5 +1,5 @@
-$white : #E5DBD9;
-$chocolate--color : #553F3F;
+$white : #102D4A;
+$chocolate--color : #A16A40;
 $coffee--color: #937666;
 $accent : #DE3D3D ;
 
@@ -7,7 +7,9 @@ $accent : #DE3D3D ;
 $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
-
+p, label{
+    color: #E5DBD9;
+}
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +32,6 @@ main {
             padding:0.5em 0.5em;
         }
 }
-
 
 // bloc Engagements
 
@@ -107,37 +108,14 @@ header
         & a:hover
         {
             color: #937666;
-            transform: translateY(5px);
+            transform: translateY(5px)
+
         }
 
         ul
         {
             list-style-type: none;
         }
-
-    }
-
-    .darkmode{
-        display:block;
-        appearance:none;
-        background-color:$chocolate--color;
-        border:0;
-        border-radius:2em;
-        height:2em;
-        width:4em;
-        position:absolute;
-        top:1em;
-        left:1em;
-        visibility:visible;
-    }
-
-    .darkmode:before{
-        content:"•";
-        height:2em;
-        width:2em;
-        
-
-
     }
    
   .hamburgermenu:focus + .navbar{
