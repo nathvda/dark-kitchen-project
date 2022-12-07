@@ -25,7 +25,7 @@ function removeItem(question){
 }
     
 
-
+// Affiche une ligne dans le résumé du panier.
 function displayInCart() {
     let panierDis = document.getElementById('patisseries__cartPreview');
     
