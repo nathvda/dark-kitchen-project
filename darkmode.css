@@ -110,8 +110,7 @@ header .header__nav {
 header button {
   visibility: hidden;
 }
-
-.darkmode {
+header .lightmode {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -131,15 +130,13 @@ header button {
   border-radius: 2em;
   transition: background 0.3s;
 }
-
-.darkmode:before {
+header .lightmode:before {
   content: url(./assets/moon.svg);
   background-color: rgba(255, 255, 255, 0.438);
   height: 2em;
   width: 2em;
   position: absolute;
-  top: 0.3em;
-  border-radius: 2em;
+  top: 3px;
 }
 
 .qui {
