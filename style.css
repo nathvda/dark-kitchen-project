@@ -89,6 +89,47 @@ header button {
   visibility: hidden;
 }
 
+.qui {
+  text-align: center;
+  padding: 0.5em;
+}
+.qui__logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+}
+.qui__logo img {
+  margin: 25px;
+  width: 150px;
+  display: block;
+}
+.qui__titre {
+  text-align: left;
+  font-family: "Berkshire Swash";
+}
+.qui__contenu {
+  padding: 2em;
+  text-align: left;
+  font-family: "Inter";
+}
+
+.bouton {
+  background-color: #DE3D3D;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 35px;
+  margin: 15px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.bouton a {
+  color: white;
+  font-family: "Abril Fatface";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 footer {
   background-color: #553F3F;
 }
