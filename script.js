@@ -39,7 +39,7 @@ function displayInCart() {
 
     // Bouton
     let panierButton = document.createElement("button");
-    let panierButtonText = document.createTextNode("-");
+    let panierButtonText = document.createTextNode("Supprimer");
 
     panierItem.classList.add("LignePanier");
     panierButton.classList.add("Enlever");

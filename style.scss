@@ -262,6 +262,35 @@ padding:0.5em;
 
 }
 
+.Enlever{
+    background-color: red;
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    text-align: center;
+    color: $white;
+}
+
+.Enlever:hover{
+    background-color: rgba(221, 20, 20, 0.815);
+}
+
+.LignePanier{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.Prix{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
 // Footer
 footer{
     background-color: $chocolate--color;

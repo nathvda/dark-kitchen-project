@@ -205,6 +205,33 @@ header button {
   text-transform: uppercase;
 }
 
+.Enlever {
+  background-color: red;
+  height: 25px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  text-align: center;
+  color: #E5DBD9;
+}
+
+.Enlever:hover {
+  background-color: rgba(221, 20, 20, 0.815);
+}
+
+.LignePanier {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.Prix {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 footer {
   background-color: #553F3F;
 }
