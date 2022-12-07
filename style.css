@@ -138,6 +138,10 @@ header button {
   background-color: #efefef;
 }
 
+.hidepastry {
+  display: none;
+}
+
 footer {
   background-color: #553F3F;
 }
