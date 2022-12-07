@@ -6,7 +6,7 @@ function filterPastries(){
 
     for (el of itemsToHide){
         
-       if (el.classList.contains(`${filtresPatisserie}`)){
+       if (el.classList.contains(`${filtresPatisserie}`) || (filtresPatisserie === "")){
 
         el.classList.remove("hidePastry");
 
