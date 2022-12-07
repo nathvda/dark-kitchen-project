@@ -18,6 +18,8 @@ body{
     font-size:18px;
     font-family:$general;
     background-color:$white;
+    overflow-x:hidden;
+    width:100vw;
 }
 
 main {
@@ -292,15 +294,15 @@ header {
     .navbar{
         display: flex;
         position:absolute;
-        top:0;
-        left:0;
+        margin:0;
+        top:1em;
+        left:2em;
+        right:2em;
         justify-content: space-between;
         font-family: $menus;
         flex-direction: row;
         border-radius: 10px;
         visibility: visible;
-        margin:0;
-        width:100vw;
         background:none;
 
         & a{
@@ -327,6 +329,11 @@ header {
             width:97vw;
             box-sizing:border-box;
 
+            li:first-of-type{
+                background-color:$white;
+                border-radius:100px;
+            }
+
             li:last-of-type{ 
 
                 margin-left:auto;
@@ -349,8 +356,8 @@ header {
 main{
 
    
-    padding:4em;
-    
+    padding:0.5em 4em;
+
 }
 
 

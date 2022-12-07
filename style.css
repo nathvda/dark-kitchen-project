@@ -9,6 +9,8 @@ body {
   font-size: 18px;
   font-family: "Inter";
   background-color: #E5DBD9;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 main h2 {
@@ -221,15 +223,15 @@ footer a {
   body header .navbar {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
+    margin: 0;
+    top: 1em;
+    left: 2em;
+    right: 2em;
     justify-content: space-between;
     font-family: "Abril Fatface";
     flex-direction: row;
     border-radius: 10px;
     visibility: visible;
-    margin: 0;
-    width: 100vw;
     background: none;
   }
   body header .navbar a {
@@ -251,6 +253,10 @@ footer a {
     width: 97vw;
     box-sizing: border-box;
   }
+  body header .navbar ul li:first-of-type {
+    background-color: #E5DBD9;
+    border-radius: 100px;
+  }
   body header .navbar ul li:last-of-type {
     margin-left: auto;
   }
@@ -262,7 +268,7 @@ footer a {
     visibility: visible;
   }
   body main {
-    padding: 4em;
+    padding: 0.5em 4em;
   }
   body #block__Engagements {
     padding: 0.5em;
