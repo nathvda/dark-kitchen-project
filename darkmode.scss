@@ -148,23 +148,32 @@ header
     }
 }
 .darkmode{
-    display:block;
     appearance:none;
     background-color:$chocolate--color;
     border:0;
-    border-radius:2em;
     height:2em;
     width:4em;
     position:absolute;
-    top:1em;
-    left:1em;
+    top:3em;
+    left:54em;
     visibility:visible;
+    flex: none;
+    width: 55px;
+    height: 26px;
+    display: inline-block;
+    background: #0f1224;
+    border: 1px solid black;
+    box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
+    border-radius: 100px;
+    transition: background .3s;
 }
 
 .darkmode:before{
-    content: '\F1D2';
+    content: url(./assets/moon.svg);
     height:2em;
     width:2em;
+    position: absolute;
+    top: 3px;
 
 }
 //Qui sommes-nous
