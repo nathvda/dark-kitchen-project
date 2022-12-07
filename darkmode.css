@@ -119,24 +119,23 @@ header .lightmode {
   height: 2em;
   width: 4em;
   position: absolute;
-  top: 3em;
-  left: 54em;
+  top: 2em;
+  right: 6em;
   visibility: visible;
   flex: none;
   display: inline-block;
   background: #0f1224;
   border: 1px solid black;
   box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
-  border-radius: 2em;
+  border-radius: 100px;
   transition: background 0.3s;
 }
 header .lightmode:before {
   content: url(./assets/moon.svg);
-  background-color: rgba(255, 255, 255, 0.438);
   height: 2em;
   width: 2em;
   position: absolute;
-  top: 3px;
+  top: 5px;
 }
 
 .qui {

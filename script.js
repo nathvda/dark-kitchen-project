@@ -16,5 +16,4 @@ function turnDark(){
    }
 }
 
-
 darkmodeBouton.addEventListener("click", turnDark);
