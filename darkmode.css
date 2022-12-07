@@ -129,6 +129,7 @@ header .lightmode {
   box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
   border-radius: 100px;
   transition: background 0.3s;
+  display: none;
 }
 header .lightmode:before {
   content: url(./assets/moon.svg);
@@ -229,6 +230,9 @@ footer a {
 }
 
 @media screen and (min-width: 900px) {
+  #darkmode {
+    display: inline-block;
+  }
   body {
     scroll-behavior: smooth;
   }

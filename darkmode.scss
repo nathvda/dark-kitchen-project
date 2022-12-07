@@ -164,6 +164,7 @@ header
         box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
         border-radius: 100px;
         transition: background .3s;
+        display: none;
     }
     
     .lightmode:before{
@@ -172,7 +173,6 @@ header
         width:2em;
         position: absolute;
         top: 5px;
-    
     }
 }
 
@@ -294,6 +294,10 @@ footer{
 }
 
 @media screen and (min-width:900px){
+
+    #darkmode{
+        display: inline-block;
+    }
 
     body {
 scroll-behavior: smooth;
