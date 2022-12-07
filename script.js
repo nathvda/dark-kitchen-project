@@ -1,9 +1,9 @@
 // Filtre les patisseries
 function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
-    console.log(filtresPatisserie);
-    let itemsToHide =  document.querySelectorAll(`.${filtresPatisserie}`);
-    console.log(itemsToHide);
+    let patisserieMenu = document.querySelector(`.patisseries__wrapper`);
+    let itemsToHide =  patisserieMenu.querySelectorAll(`div`);
+
     for (el of itemsToHide){
         
        if (el.classList.contains(`${filtresPatisserie}`) || (filtresPatisserie === "")){
