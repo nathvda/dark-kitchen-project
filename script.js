@@ -11,7 +11,6 @@ function filterPastries() {
         el.classList.remove("hidePastry");
 
        } else {
-
         el.classList.add("hidePastry");
     }
 }
@@ -37,25 +36,34 @@ function displayInCart() {
     let panierPrice = document.createElement("div");
     let panierPriceText = document.createTextNode("Prix");
 
+    // Nombre d'unités
+    let panierUnites = document.createElement("div");
+    let panierUnitesText = document.createTextNode("Unites");
+
     // Bouton
     let panierButton = document.createElement("button");
     let panierButtonText = document.createTextNode("Supprimer");
 
+    // Ajouter des classes pour le css
     panierItem.classList.add("LignePanier");
-    panierButton.classList.add("Enlever");
+    panierUnites.classList.add("Unites");
     panierPrice.classList.add("Prix");
+    panierButton.classList.add("Enlever");
 
     panierButton.setAttribute("type", "button");
 
+    // Évenement de suppression
     panierButton.addEventListener('click', (e) => {
         removeItem(panierItem)
     });
 
     panierItem.appendChild(panierItemText);
     panierPrice.appendChild(panierPriceText);
+    panierUnites.appendChild(panierUnitesText);
     panierButton.appendChild(panierButtonText);
 
     panierItem.appendChild(panierPrice);
+    panierItem.appendChild(panierUnites);
     panierItem.appendChild(panierButton);
     panierDis.appendChild(panierItem);
 }
