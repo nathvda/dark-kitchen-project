@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
+p, label {
+  color: #E5DBD9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Inter";
+  background-color: #102D4A;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+main h2 {
+  color: #A16A40;
+  font-family: "Berkshire Swash";
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+}
+
+#block__Engagements {
+  padding: 0.5em;
+}
+#block__Engagements h3 {
+  color: #A16A40;
+  font-family: "Berkshire Swash";
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+#block__Engagements ul {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+#block__Engagements ul li {
+  margin-bottom: 2em;
+}
+#block__Engagements ul li img {
+  height: 40vw;
+  width: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+header {
+  background-image: url(assets/jr-r-90HdOlGbjck-unsplash.jpg);
+  background-color: #102D4A;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header h1 {
+  font-family: "Berkshire Swash";
+  color: #A16A40;
+  text-align: center;
+}
+header .navbar {
+  position: absolute;
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Abril Fatface";
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.699);
+  visibility: hidden;
+}
+header .navbar a {
+  color: #A16A40;
+  display: block;
+  margin: 12px 0;
+  padding: 0 25px;
+  transition: all 0.5s ease;
+}
+header .navbar a:hover {
+  color: #937666;
+  transform: translateY(5px);
+}
+header .navbar ul {
+  list-style-type: none;
+}
+header .hamburgermenu:focus + .navbar {
+  visibility: visible;
+}
+header .caddie {
+  width: 10vw;
+  visibility: hidden;
+}
+header .hamburger {
+  width: 15vw;
+  display: flex;
+}
+header .header__nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+header button {
+  visibility: hidden;
+}
+header .lightmode {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #A16A40;
+  border: 0;
+  height: 2em;
+  width: 4em;
+  position: absolute;
+  top: 2em;
+  right: 6em;
+  visibility: visible;
+  flex: none;
+  display: inline-block;
+  background: #0f1224;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
+  border-radius: 100px;
+  transition: background 0.3s;
+}
+header .lightmode:before {
+  content: url(./assets/moon.svg);
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 5px;
+}
+
+.qui {
+  text-align: center;
+  padding: 0.5em;
+}
+.qui__logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+}
+.qui__logo img {
+  margin: 25px;
+  width: 150px;
+  display: block;
+}
+.qui__titre {
+  text-align: left;
+  font-family: "Berkshire Swash";
+}
+.qui__contenu {
+  padding: 2em;
+  text-align: left;
+  font-family: "Inter";
+}
+
+.bouton {
+  background-color: #DE3D3D;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 35px;
+  margin: 15px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.bouton a {
+  color: white;
+  font-family: "Abril Fatface";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#block__Commande {
+  padding: 0.5em;
+}
+
+.patisseries__commande {
+  background-color: #efefef;
+}
+
+footer {
+  background-color: #A16A40;
+}
+footer a {
+  text-decoration: none;
+  color: #102D4A;
+}
+
+.footer_title {
+  text-align: center;
+  color: #102D4A;
+  font-family: "Berkshire Swash";
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.footer_title_div {
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "Inter";
+}
+
+.footer_div {
+  color: #102D4A;
+  margin-left: 20px;
+}
+.footer_div li {
+  list-style-type: none;
+}
+.footer_div p {
+  font-family: "Inter";
+}
+
+.copyright {
+  text-align: center;
+  color: #102D4A;
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    scroll-behavior: smooth;
+  }
+  body .hamburgermenu {
+    display: none;
+  }
+  body header {
+    height: 50vh;
+    position: relative;
+  }
+  body header h1 {
+    position: absolute;
+    bottom: 1rem;
+    left: 2em;
+    font-size: 7vw;
+  }
+  body header button {
+    position: absolute;
+    bottom: 1rem;
+    visibility: visible;
+    right: 2em;
+  }
+  body header .navbar {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    top: 1em;
+    left: 2em;
+    right: 2em;
+    justify-content: space-between;
+    font-family: "Abril Fatface";
+    flex-direction: row;
+    border-radius: 10px;
+    visibility: visible;
+    background: none;
+  }
+  body header .navbar a {
+    color: #A16A40;
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  body header .navbar a:hover {
+    color: #937666;
+    transform: translateY(0px);
+  }
+  body header .navbar ul {
+    list-style-type: none;
+    display: flex;
+    width: 97vw;
+    box-sizing: border-box;
+  }
+  body header .navbar ul li:first-of-type {
+    background-color: #102D4A;
+    border-radius: 100px;
+  }
+  body header .navbar ul li:last-of-type {
+    margin-left: auto;
+  }
+  body header .navbar ul li:last-of-type .caddie {
+    width: 3.5rem;
+    height: 3.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    visibility: visible;
+  }
+  body main {
+    padding: 0.5em 4em;
+  }
+  body #block__Engagements {
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  body #block__Engagements h3 {
+    color: #A16A40;
+    font-family: "Berkshire Swash";
+    font-size: 1.5em;
+    padding: 0.5em 0;
+  }
+  body #block__Engagements ul {
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    grid-gap: 1em;
+  }
+  body #block__Engagements ul li {
+    margin-bottom: 2em;
+  }
+  body #block__Engagements ul li img {
+    height: 20vw;
+    width: 25vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4px;
+  }
+  body footer {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  body .footer_div {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+  }
+  body .footer_div div {
+    max-width: 300px;
+    margin: 40px;
+    margin-top: 0;
+  }
+  body .footer_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body .footer_title_div {
+    color: #102D4A;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: "Abril Fatface";
+  }
+  body .copyright {
+    color: #102D4A;
+    font-size: 20px;
+  }
+  body .qui {
+    display: flex;
+    text-align: left;
+  }
+}/*# sourceMappingURL=darkmode.css.map */

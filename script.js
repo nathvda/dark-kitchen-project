@@ -22,6 +22,10 @@ displayInCart();
 function removeItem(question){
     question.remove();
 }
+
+/*function updateFinalPrice(){
+    let finalPrice = document.get
+}*/
     
 
 // Affiche une ligne dans le résumé du panier.
