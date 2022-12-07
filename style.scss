@@ -31,6 +31,7 @@ main {
         }
 }
 
+
 // bloc Engagements
 
 #block__Engagements{
@@ -106,14 +107,32 @@ header
         & a:hover
         {
             color: #937666;
-            transform: translateY(5px)
-
+            transform: translateY(5px);
         }
 
         ul
         {
             list-style-type: none;
         }
+
+    }
+
+    .darkmode{
+        display:block;
+        appearance:none;
+        background-color:$chocolate--color;
+        border:0;
+        border-radius:2em;
+        height:2em;
+        width:4em;
+        position:absolute;
+        top:1em;
+        left:1em;
+        visibility:visible;
+    }
+
+    .darkmode:before{
+        content:"•";
     }
    
   .hamburgermenu:focus + .navbar{
