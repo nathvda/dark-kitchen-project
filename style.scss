@@ -173,7 +173,7 @@ header
 
 //bouton "Commander"
 .bouton{
-    background-color: #DE3D3D;
+    background-color: $accent;
     border: none;
     border-radius : 40px;
     padding: 15px 35px;
@@ -263,7 +263,7 @@ footer{
     padding-top: 20px;
 }
 
-@media screen and (min-width:375px){
+@media screen and (min-width:900px){
 
     body {
 scroll-behavior: smooth;
