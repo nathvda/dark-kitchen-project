@@ -65,10 +65,22 @@ header .navbar {
   display: flex;
   justify-content: space-between;
   font-family: "Abril Fatface";
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.699);
   visibility: hidden;
 }
 header .navbar a {
   color: #553F3F;
+  display: block;
+  margin: 12px 0;
+  padding: 0 25px;
+  transition: all 0.5s ease;
+}
+header .navbar a:hover {
+  color: #937666;
+  transform: translateY(5px);
 }
 header .navbar ul {
   list-style-type: none;
