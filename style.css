@@ -85,6 +85,9 @@ header .navbar a:hover {
 header .navbar ul {
   list-style-type: none;
 }
+header .hamburgermenu:focus + .navbar {
+  visibility: visible;
+}
 header .caddie {
   width: 10vw;
   visibility: hidden;
@@ -192,16 +195,81 @@ footer a {
 }
 
 @media screen and (min-width: 375px) {
-  #block__Engagements {
+  body {
+    scroll-behavior: smooth;
+  }
+  body .hamburgermenu {
+    display: none;
+  }
+  body header {
+    height: 50vh;
+    position: relative;
+  }
+  body header h1 {
+    position: absolute;
+    bottom: 1rem;
+    left: 2em;
+    font-size: 7vw;
+  }
+  body header button {
+    position: absolute;
+    bottom: 1rem;
+    visibility: visible;
+    right: 2em;
+  }
+  body header .navbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    font-family: "Abril Fatface";
+    flex-direction: row;
+    border-radius: 10px;
+    visibility: visible;
+    margin: 0;
+    width: 100vw;
+    background: none;
+  }
+  body header .navbar a {
+    color: #553F3F;
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  body header .navbar a:hover {
+    color: #937666;
+    transform: translateY(0px);
+  }
+  body header .navbar ul {
+    list-style-type: none;
+    display: flex;
+    width: 97vw;
+    box-sizing: border-box;
+  }
+  body header .navbar ul li:last-of-type {
+    margin-left: auto;
+  }
+  body header .navbar ul li:last-of-type .caddie {
+    width: 3.5rem;
+    height: 3.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    visibility: visible;
+  }
+  body #block__Engagements {
     padding: 0.5em;
   }
-  #block__Engagements h3 {
+  body #block__Engagements h3 {
     color: #553F3F;
     font-family: "Berkshire Swash";
     font-size: 1.5em;
     padding: 0.5em 0;
   }
-  #block__Engagements ul {
+  body #block__Engagements ul {
     padding: 3em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -210,46 +278,46 @@ footer a {
     height: min-content;
     grid-gap: 1em;
   }
-  #block__Engagements ul li {
+  body #block__Engagements ul li {
     margin-bottom: 2em;
   }
-  #block__Engagements ul li img {
+  body #block__Engagements ul li img {
     height: 20vw;
     width: 25vw;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 4px;
   }
-  footer {
+  body footer {
     padding-bottom: 20px;
     padding-top: 30px;
   }
-  .footer_div {
+  body .footer_div {
     display: flex;
     flex-direction: row;
     padding: 30px;
   }
-  .footer_div div {
+  body .footer_div div {
     max-width: 300px;
     margin: 40px;
     margin-top: 0;
   }
-  .footer_div {
+  body .footer_div {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  .footer_title_div {
+  body .footer_title_div {
     color: #E5DBD9;
     padding-bottom: 25px;
     text-transform: uppercase;
     font-weight: "Abril Fatface";
   }
-  .copyright {
+  body .copyright {
     color: #E5DBD9;
     font-size: 20px;
   }
-  .qui {
+  body .qui {
     display: flex;
     text-align: left;
   }

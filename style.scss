@@ -92,8 +92,6 @@ header
         background-color: rgba(255, 255, 255, 0.699);
         visibility: hidden;
 
-        
-
         & a{
             color: $chocolate--color;
             display: block;
@@ -114,6 +112,11 @@ header
             list-style-type: none;
         }
     }
+   
+  .hamburgermenu:focus + .navbar{
+    visibility: visible;;
+  }
+   
     .caddie
     {
             width:10vw;
@@ -257,11 +260,94 @@ footer{
     padding-top: 20px;
 }
 
-
-
 @media screen and (min-width:375px){
 
+    body {
+scroll-behavior: smooth;
+
+.hamburgermenu{
+    display: none;
+}
+
+header {  
+
+    height:50vh;
+    position:relative;
+
+    h1{
+        position:absolute;
+        bottom:1rem;
+        left:2em;
+        font-size:7vw;
+    }
+
+    button{
+        position:absolute;
+        bottom:1rem;
+        visibility:visible;
+        right:2em;
+    }
     
+    .navbar{
+        display: flex;
+        position:absolute;
+        top:0;
+        left:0;
+        justify-content: space-between;
+        font-family: $menus;
+        flex-direction: row;
+        border-radius: 10px;
+        visibility: visible;
+        margin:0;
+        width:100vw;
+        background:none;
+
+        & a{
+            color: $chocolate--color;
+            display: block;
+            margin: 12px 0;
+            padding: 0 25px;
+            transition: all .50s ease;
+            text-decoration:none;
+            font-size:25px;
+        }
+
+        & a:hover
+        {
+            color: #937666;
+            transform: translateY(0px);
+
+        }
+
+        ul
+        {
+            list-style-type: none;
+            display:flex;
+            width:97vw;
+            box-sizing:border-box;
+
+            li:last-of-type{ 
+
+                margin-left:auto;
+
+                .caddie
+                {
+                    width:3.5rem;
+                    height:3.5rem;
+                    object-fit:cover;
+                    visibility: visible;
+
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+
 #block__Engagements{
 
     padding:.5em;
@@ -301,7 +387,6 @@ footer{
 footer{
     padding-bottom: 20px;
     padding-top: 30px;
-
 }
 
 .footer_div{
@@ -342,4 +427,5 @@ footer{
     text-align:left;
 }  
 
+}
 }
