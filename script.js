@@ -17,7 +17,14 @@ function filterPastries() {
 }
 
 displayInCart();
+
 }
+
+function removeItem(question){
+    question.remove();
+}
+    
+
 
 function displayInCart() {
     let panierDis = document.getElementById('patisseries__cartPreview');
@@ -39,6 +46,10 @@ function displayInCart() {
     panierPrice.classList.add("Prix");
 
     panierButton.setAttribute("type", "button");
+
+    panierButton.addEventListener('click', (e) => {
+        removeItem(panierItem)
+    });
 
     panierItem.appendChild(panierItemText);
     panierPrice.appendChild(panierPriceText);
