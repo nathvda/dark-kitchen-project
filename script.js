@@ -5,15 +5,28 @@
 function filterPastries(){
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
     console.log(filtresPatisserie);
-    let itemsToHide =  document.querySelectorAll(`.${filtresPatisserie}`);
+    let patisserieMenu = document.querySelector(`.patisseries__wrapper`);
+    let itemsToHide =  patisserieMenu.querySelectorAll(`div`);
     console.log(itemsToHide);
+
     for (el of itemsToHide){
-        el.classList.toggle('hidePastry');
+        
+       if (el.classList.contains(`${filtresPatisserie}`)){
+
+        el.classList.remove("hidePastry");
+
+       } else {
+
+        el.classList.add("hidePastry");
     }
 }
 
-let filtreswrap = document.getElementById('patisserie_filters');
+}
+
+let filtreswrap = document.querySelector('.patisserie_filters');
 console.log(filtreswrap);
+
+filtreswrap.addEventListener('change', filterPastries);
 
 
 
