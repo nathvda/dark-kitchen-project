@@ -172,11 +172,18 @@ header
 padding:0.5em;
 }
 .patisserie_filters{
-
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
 }
 
-label{
-
+.filter{
+    font-family: $general;
+    margin-left: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    max-width: 70px;
 }
 
 .patisseries__wrapper{
