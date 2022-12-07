@@ -27,12 +27,12 @@ function displayInCart() {
     let panierItemText = document.createTextNode("Gateau");
     
     // Prix
-    let panierButton = document.createElement("div");
-    let panierButtonText = document.createTextNode("Prix");
+    let panierPrice = document.createElement("div");
+    let panierPriceText = document.createTextNode("Prix");
 
     // Bouton
-    let panierPrice = document.createElement("button");
-    let panierPriceText = document.createTextNode("-");
+    let panierButton = document.createElement("button");
+    let panierButtonText = document.createTextNode("-");
 
     panierItem.classList.add("LignePanier");
     panierButton.classList.add("Enlever");
