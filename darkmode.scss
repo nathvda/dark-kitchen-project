@@ -147,7 +147,26 @@ header
         visibility: hidden;
     }
 }
+.darkmode{
+    display:block;
+    appearance:none;
+    background-color:$chocolate--color;
+    border:0;
+    border-radius:2em;
+    height:2em;
+    width:4em;
+    position:absolute;
+    top:1em;
+    left:1em;
+    visibility:visible;
+}
 
+.darkmode:before{
+    content: '\F1D2';
+    height:2em;
+    width:2em;
+
+}
 //Qui sommes-nous
 .qui{
     text-align: center;
