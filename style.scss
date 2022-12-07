@@ -28,6 +28,8 @@ main {
         }
 }
 
+// bloc Engagements
+
 #block__Engagements{
 
     padding:.5em;
@@ -163,6 +165,36 @@ header
     }
 }
 
+
+// Patisserie
+
+#block__Commande{
+padding:0.5em;
+}
+.patisserie_filters{
+
+}
+
+label{
+
+}
+
+.patisseries__wrapper{
+
+}
+
+.patisseries__commande{
+    background-color:#efefef;
+}
+
+.patisseries__wrapper{
+
+}
+
+.patisseries__cartPreview{
+    
+} 
+
 // Footer
 footer{
     background-color: $chocolate--color;
@@ -243,6 +275,7 @@ footer{
                 border-radius:4px;
             };
      }
+     
     }
 }
     
