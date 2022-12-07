@@ -28,6 +28,8 @@ main {
         }
 }
 
+// bloc Engagements
+
 #block__Engagements{
 
     padding:.5em;
@@ -138,6 +140,78 @@ header
     }
 }
 
+//Qui sommes-nous
+.qui{
+    text-align: center;
+    padding: 0.5em;
+    &__logo{
+        width : 200px;
+        height : 200px;
+        margin:auto;
+        border-radius: 100px;
+        img{
+            margin:25px;    
+            width : 150px;
+            display: block;        }
+    }
+    &__titre{
+        text-align:left;
+        font-family: $titres;
+    }
+    &__contenu{
+        padding:2em;
+        text-align:left;
+        font-family: $general;
+    }
+}
+
+//bouton "Commander"
+.bouton{
+    background-color: #DE3D3D;
+    border: none;
+    border-radius : 40px;
+    padding: 15px 35px;
+    margin : 15px;
+    text-align: center;
+    font-size: 1.5em;
+    a {
+        color:white;
+        font-family: $menus;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+
+// Patisserie
+
+#block__Commande{
+padding:0.5em;
+}
+.patisserie_filters{
+
+}
+
+label{
+
+}
+
+.patisseries__wrapper{
+
+}
+
+.patisseries__commande{
+    background-color:#efefef;
+}
+
+.patisseries__wrapper{
+
+}
+
+.patisseries__cartPreview{
+    
+} 
+
 // Footer
 footer{
     background-color: $chocolate--color;
@@ -218,6 +292,7 @@ footer{
                 border-radius:4px;
             };
      }
+     
     }
 }
     
@@ -259,15 +334,12 @@ footer{
     font-size: 20px;
 } 
 
-}
 
-//A rajouter dans les media queries 
-@media screen and (min-width:1024px){
 
+// Media queries qui sommes-nous?
 .qui{
     display:flex;
     text-align:left;
 }  
-    
-}
 
+}
