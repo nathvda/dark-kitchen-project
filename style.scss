@@ -188,6 +188,25 @@ header
     }
 }
 
+.article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article__carte img{
+    width: 150px;
+    height: 150px;
+}
+
+.article__carte{
+    background-color: rgb(161, 161, 161);
+    margin: 10px;
+    max-width: 200px;
+}
+
+
+
+
 
 // Patisserie
 
