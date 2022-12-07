@@ -72,6 +72,7 @@ header
     background-size: cover;
     background-position: center;
     
+    
     h1
     {
         font-family: $titres;
@@ -121,9 +122,6 @@ header
         visibility: hidden;
     }
 }
-        
-
-
 
 // Footer
 footer{
@@ -248,3 +246,14 @@ footer{
 } 
 
 }
+
+//A rajouter dans les media queries 
+@media screen and (min-width:1024px){
+
+.qui{
+    display:flex;
+    text-align:left;
+}  
+    
+}
+
