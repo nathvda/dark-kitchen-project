@@ -190,6 +190,7 @@ header button {
   height: 8.333rem;
   display: flex;
   margin: auto;
+  border-radius: 40px;
 }
 
 .article__carte {
@@ -266,6 +267,7 @@ p.article__carte--prix {
   color: #102D4A;
   padding: 1em;
   position: relative;
+  border-radius: 9px;
 }
 .patisserie_filters input[type=radio] {
   opacity: 0;
@@ -483,8 +485,7 @@ footer a {
     margin-left: auto;
   }
   body header .navbar ul li:last-of-type .caddie {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
     -o-object-fit: cover;
        object-fit: cover;
     visibility: visible;
