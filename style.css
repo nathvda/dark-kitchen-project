@@ -151,6 +151,7 @@ header button {
 .article {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .article__carte img {
@@ -168,7 +169,6 @@ header button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: red;
 }
 
 .article_carte button {
