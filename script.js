@@ -8,11 +8,13 @@ function turnDark(){
     darkmodeBouton.classList.add("lightmode");
     cssTarget.href = 'darkmode.css';
     console.log('clair');
+    localStorage.setItem("darkmode","no");
 
    } else if (darkmodeBouton.classList.contains("lightmode")){
     darkmodeBouton.classList.remove("lightmode");
     darkmodeBouton.classList.add("darkmode");
     cssTarget.href = 'style.css';
+    localStorage.setItem("darkmode","yes");
    }
 }
 // Filtre les patisseries
@@ -129,7 +131,6 @@ const increment = (e) => {
             }
         }
     }
-
     sumCart();
  
 }
