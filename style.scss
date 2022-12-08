@@ -158,7 +158,8 @@ header
         img{
             margin:25px;    
             width : 150px;
-            display: block;        }
+            display: block;        
+        }
     }
     &__titre{
         text-align:left;
@@ -204,17 +205,32 @@ header
     max-width: 200px;
 }
 
+.article_carte{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: red;
+}
+
 .article_carte button{
     color: $white;
     height: 30px;
     width: 30px;
     border: none;
-    background-color: red;
+    background-color: $accent;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 20px;
 }
 
+.article_carte button:hover{
+    background-color: #ec7a7a;
+}
 
-
-
+section{
+    height: 46vw;
+}
 
 // Patisserie
 
