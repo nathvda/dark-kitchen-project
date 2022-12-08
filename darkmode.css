@@ -200,7 +200,7 @@ header .lightmode:before {
   position: relative;
 }
 
-.article__carte.chocolat, .article__carte.fruits {
+.article__carte.chocolat, .article__carte.fruits, .article__carte.lactose {
   border: 3px solid #DE3D3D;
   border-radius: 50px;
   padding-bottom: 5em;
@@ -214,8 +214,8 @@ header .lightmode:before {
   background-color: #DE3D3D;
   border-radius: 100px;
   position: absolute;
-  bottom: 1em;
-  left: 3em;
+  bottom: 2em;
+  left: 4em;
 }
 
 .article_carte button:nth-of-type(2) {
@@ -225,13 +225,19 @@ header .lightmode:before {
   border: none;
   background-color: #DE3D3D;
   position: absolute;
-  bottom: 1em;
-  left: 7em;
+  bottom: 2em;
+  left: 9em;
 }
 
 p.article__carte--prix {
   display: flex;
   justify-content: center;
+}
+
+.article__carte--variable {
+  position: absolute;
+  left: 5.3em;
+  bottom: 1.7em;
 }
 
 #block__Commande {

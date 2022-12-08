@@ -235,10 +235,9 @@ header
     padding: 0.556rem;
     font-family: $general;
     position: relative;   
-
 }
 
-.article__carte.chocolat, .article__carte.fruits{
+.article__carte.chocolat, .article__carte.fruits, .article__carte.lactose{
     border: 3px solid $accent;
     border-radius: 50px;
     padding-bottom: 5em;
@@ -251,8 +250,8 @@ header
     background-color: $accent;
     border-radius: 100px;
     position: absolute;
-    bottom: 1em;
-    left: 3em;
+    bottom: 2em;
+    left: 4em;
 }
 .article_carte button:nth-of-type(2){
     color: $white;
@@ -261,12 +260,18 @@ header
     border: none;
     background-color: $accent;
     position: absolute;
-    bottom: 1em;
-    left: 7em;
+    bottom: 2em;
+    left: 9em;
 }
 p.article__carte--prix{
     display: flex;
     justify-content: center;
+
+}
+.article__carte--variable{
+    position: absolute;
+    left: 5.3em;
+    bottom:1.7em;
 
 }
 
