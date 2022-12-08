@@ -90,9 +90,11 @@ const decrement = (e) => {
 
         if (nombre == 0){
             //Supprimer l'article du panier
+
         }
         else{
             //Décrémenter panierUnitesText 
+            
         }
     }
 }
@@ -102,12 +104,22 @@ const increment = (e) => {
     nombre += 1;
     e.target.previousElementSibling.textContent = `${nombre}`;
     let art = e.target.parentElement.parentElement.children;
-    console.log(art[1]);
-    //if (nombre == 1){
+    //console.log(art[1]);
+    if (nombre == 1){
         displayInCart(art[1].textContent, art[3].textContent, nombre);
-    //}
-    //else {
-
+    }
+    else {
+        let verif = document.getElementById('patisseries__cartPreview');
+        for (let el of verif.children){
+            //console.log(el);
+            //console.log(el.firstChild.textContent);
+            //console.log(e.target.parentElement.parentElement.children[1].textContent);
+            if(el.firstChild.textContent == e.target.parentElement.parentElement.children[1].textContent){
+                //console.log(el.children[1].textContent);
+                el.children[1].textContent = `${nombre}`;
+            }
+        }
+    }
     //}
     //if (nombre == 1){
         //
