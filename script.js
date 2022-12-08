@@ -1,3 +1,20 @@
+let darkmodeBouton = document.getElementById("darkmode");
+
+function turnDark(){
+    let cssTarget = document.getElementById('styleToggle');
+
+   if (darkmodeBouton.classList.contains("darkmode")){
+    darkmodeBouton.classList.remove("darkmode");
+    darkmodeBouton.classList.add("lightmode");
+    cssTarget.href = 'darkmode.css';
+    console.log('clair');
+
+   } else if (darkmodeBouton.classList.contains("lightmode")){
+    darkmodeBouton.classList.remove("lightmode");
+    darkmodeBouton.classList.add("darkmode");
+    cssTarget.href = 'style.css';
+   }
+}
 // Filtre les patisseries
 function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
@@ -46,8 +63,9 @@ function sumCart(){
 function afficherPrixtotal(somme, nombreunites){
 
     // prix
-    let conteneurPrix = document.querySelector(".preview__prix");
-    conteneurPrix.innerHTML = `${somme.toFixed(2)}`;
+    let conteneurPrix = document.querySelector(".preview__prix");  
+    conteneurPrix.innerHTML = `${somme.toFixed(2)}€`;
+
 
     // unités
     let conteneurUnites = document.querySelector(".preview__unites");
@@ -62,12 +80,20 @@ function removeItem(question){
 /*function updateFinalPrice(){
     let finalPrice = document.get
 }*/
+
 // 2 Fonctions pour incrémenter/décrémenter le nombre d'articles
 const decrement = (e) => {
     let nombre = Number(e.target.nextElementSibling.textContent);
     if(nombre > 0){
         nombre -= 1;
         e.target.nextElementSibling.textContent = `${nombre}`;
+
+        if (nombre == 0){
+            //Supprimer l'article du panier
+        }
+        else{
+            //Décrémenter panierUnitesText 
+        }
     }
 }
 
@@ -75,23 +101,35 @@ const increment = (e) => {
     let nombre = Number(e.target.previousElementSibling.textContent);
     nombre += 1;
     e.target.previousElementSibling.textContent = `${nombre}`;
+    let art = e.target.parentElement.parentElement.children;
+    console.log(art[1]);
+    //if (nombre == 1){
+        displayInCart(art[1].textContent, art[3].textContent, nombre);
+    //}
+    //else {
+
+    //}
+    //if (nombre == 1){
+        //
+    //}
+    //displayInCart()
 }
 
 // Affiche une ligne dans le résumé du panier.
-function displayInCart() {
+function displayInCart(gateau, prix, nb) {
     let panierDis = document.getElementById('patisseries__cartPreview');
     
     // Ligne
     let panierItem = document.createElement("li");
-    let panierItemText = document.createTextNode("Gateau");
+    let panierItemText = document.createTextNode(gateau);
     
     // Prix
     let panierPrice = document.createElement("div");
-    let panierPriceText = document.createTextNode("15.30");
+    let panierPriceText = document.createTextNode(prix);
 
     // Nombre d'unités
     let panierUnites = document.createElement("div");
-    let panierUnitesText = document.createTextNode("5");
+    let panierUnitesText = document.createTextNode(nb);
 
     // Bouton
     let panierButton = document.createElement("button");
@@ -142,17 +180,6 @@ for (let listeArticle of listeArticles){
 
     bouttonMinus.addEventListener('click', decrement);
     bouttonPlus.addEventListener('click', increment);
-
 }
 
-
-
-
-/*
-<div class="patisseries__commande">
-    <div id="patisseries__cartPreview">
-        <!-- CONTENU DYNAMIQUE -->
-    </div>
-    <button>Commander</button>
-</div>
-</article> */
+darkmodeBouton.addEventListener("click", turnDark);

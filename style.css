@@ -88,6 +88,31 @@ header .navbar a:hover {
 header .navbar ul {
   list-style-type: none;
 }
+header .darkmode {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #553F3F;
+  border: 0;
+  border-radius: 2em;
+  height: 2em;
+  width: 4em;
+  position: absolute;
+  top: 2em;
+  right: 6em;
+  transition: background 0.3s;
+}
+header .darkmode:before {
+  content: url(./assets/brightness-high.svg);
+  border-radius: 2em;
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 0.3em;
+  right: 1.9em;
+}
 header .hamburgermenu:focus + .navbar {
   visibility: visible;
 }
@@ -200,7 +225,19 @@ section {
   flex-direction: column;
   padding: 10px;
   margin: 20px;
-  background-color: rgb(197, 184, 184);
+}
+.patisserie_filters label {
+  margin-bottom: 1px;
+  background-color: #DE3D3D;
+  color: #E5DBD9;
+  padding: 1em;
+  position: relative;
+}
+.patisserie_filters input[type=radio] {
+  opacity: 0;
+}
+.patisserie_filters input[type=radio]:checked + label {
+  background-color: #553F3F;
 }
 
 .filter {
@@ -213,14 +250,39 @@ section {
 
 .patisseries__commande {
   background-color: rgb(197, 184, 184);
+  border-radius: 0.5em;
+  border: 1px solid #937666;
+}
+
+#patisseries__cartPreview {
+  margin: 0 1em;
+}
+#patisseries__cartPreview li {
+  background-color: #E5DBD9;
+  border: #937666 1px solid;
+  border-width: 1px 1px 0px 1px;
+  display: grid;
+  grid-template-columns: 60% 10% 10% 20%;
+  text-align: left;
+  align-items: center;
+  padding-left: 2em;
+}
+#patisseries__cartPreview li div {
+  border-left: 1px #937666 solid;
+  padding: 10px;
+}
+#patisseries__cartPreview li .Prix {
+  text-align: left;
+}
+#patisseries__cartPreview li .unites {
+  text-align: right;
 }
 
 #panier__somme {
-  margin: 1em;
+  margin: 0 1em;
   display: flex;
   justify-content: space-around;
   background-color: #E5DBD9;
-  border-radius: 4px;
   border: 1px #937666 solid;
 }
 #panier__somme span {
@@ -269,10 +331,8 @@ section {
 
 .Enlever {
   background-color: red;
-  height: 25px;
-  width: 100px;
+  height: 100%;
   cursor: pointer;
-  border-radius: 7px;
   border: none;
   text-align: center;
   color: #E5DBD9;
@@ -286,12 +346,6 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px;
-}
-
-.Prix {
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 footer {
@@ -306,7 +360,7 @@ footer a {
   text-align: center;
   color: #E5DBD9;
   font-family: "Berkshire Swash";
-  font-size: 40px;
+  font-size: 50px;
   padding-top: 20px;
 }
 
@@ -336,6 +390,9 @@ footer a {
 }
 
 @media screen and (min-width: 900px) {
+  #darkmode {
+    display: block;
+  }
   body {
     scroll-behavior: smooth;
   }
@@ -407,6 +464,41 @@ footer a {
   }
   body main {
     padding: 0.5em 4em;
+  }
+  body #block__Commande {
+    padding: 0.5em;
+  }
+  body .patisserie_filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+  }
+  body .patisserie_filters label {
+    margin-bottom: 1px;
+    background-color: #DE3D3D;
+    color: #E5DBD9;
+    padding: 1em;
+    position: relative;
+  }
+  body .patisserie_filters input[type=radio] {
+    opacity: 0;
+  }
+  body .patisserie_filters input[type=radio]:checked + label {
+    background-color: #553F3F;
+  }
+  body .filter {
+    font-family: "Inter";
+    margin-left: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    max-width: 70px;
+  }
+  body .patisseries__commande {
+    background-color: rgb(197, 184, 184);
+    width: 70vw;
+    margin: auto;
   }
   body #block__Engagements {
     padding: 0.5em;

@@ -31,6 +31,7 @@ main {
         }
 }
 
+
 // bloc Engagements
 
 #block__Engagements{
@@ -106,14 +107,40 @@ header
         & a:hover
         {
             color: #937666;
-            transform: translateY(5px)
-
+            transform: translateY(5px);
         }
 
         ul
         {
             list-style-type: none;
         }
+
+    }
+
+    .darkmode{
+        display:none;
+        appearance:none;
+        background-color:$chocolate--color;
+        border:0;
+        border-radius:2em;
+        height:2em;
+        width:4em;
+        position:absolute;
+        top:2.0em;
+        right:6em;
+        transition: background .3s;
+    }
+
+    .darkmode:before{
+        content:url(./assets/brightness-high.svg);
+        border-radius: 2em;
+        border-radius: 2em;
+        height:2em;
+        width:2em;
+        position: absolute;
+        top: 0.3em;
+        right: 1.90em;
+    
     }
    
   .hamburgermenu:focus + .navbar{
@@ -242,7 +269,24 @@ padding:0.5em;
     flex-direction: column;
     padding: 10px;
     margin: 20px;
-    background-color: rgb(197, 184, 184);
+
+    label{
+        margin-bottom: 1px;
+        background-color:$accent;
+        color:$white;
+        padding:1em;
+        position:relative;
+    }
+
+    input[type="radio"]{
+        opacity:0;
+    }
+
+   input[type="radio"]:checked + label {
+        background-color:$chocolate--color;
+    }
+
+ 
 }
 
 .filter{
@@ -259,22 +303,53 @@ padding:0.5em;
 
 .patisseries__commande{
     background-color:rgb(197, 184, 184);
+    border-radius:.5em;
+    border:1px solid $coffee--color;
 }
 
 .patisseries__wrapper{
 
 }
 
-.patisseries__cartPreview{
+#patisseries__cartPreview{
 
-}
+    margin:0 1em;
+
+    li{
+        background-color:$white;
+        border:$coffee--color 1px solid;
+        border-width:1px 1px 0px 1px;
+        display:grid;
+        grid-template-columns: 60% 10% 10% 20%;
+        text-align: left;
+        align-items:center;
+        padding-left:2em;
+
+        div{
+            border-left: 1px $coffee--color solid;
+            padding:10px;
+        }
+
+        .Prix{
+            text-align:left;
+
+        }
+
+        .unites{
+            text-align:right;
+        }
+
+    }
+
+ 
+    
+} 
 
 #panier__somme{
-    margin:1em;
+    margin: 0 1em;
     display:flex;
     justify-content: space-around;
     background-color:$white;
-    border-radius:4px;
     border:1px $coffee--color solid;
 
     span {
@@ -332,10 +407,8 @@ padding:0.5em;
 
 .Enlever{
     background-color: red;
-    height: 25px;
-    width: 100px;
+    height: 100%;
     cursor: pointer;
-    border-radius: 7px;
     border: none;
     text-align: center;
     color: $white;
@@ -349,13 +422,7 @@ padding:0.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 10px;
 
-}
-
-.Prix{
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 
@@ -373,7 +440,7 @@ footer{
     text-align: center;
     color: $white;
     font-family: $titres;
-    font-size: 40px;
+    font-size: 50px;
     padding-top: 20px;
 }
 
@@ -406,6 +473,9 @@ footer{
 
 @media screen and (min-width:900px){
 
+#darkmode{
+    display: block;
+}
     body {
 scroll-behavior: smooth;
 
@@ -500,6 +570,50 @@ main{
     padding:0.5em 4em;
 
 }
+
+
+#block__Commande{
+    padding:0.5em;
+    }
+    .patisserie_filters{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 20px;
+    
+        label{
+            margin-bottom: 1px;
+            background-color:$accent;
+            color:$white;
+            padding:1em;
+            position:relative;
+        }
+    
+        input[type="radio"]{
+            opacity:0;
+        }
+    
+       input[type="radio"]:checked + label {
+            background-color:$chocolate--color;
+        }
+    
+     
+    }
+    
+    .filter{
+        font-family: $general;
+        margin-left: 20px;
+        padding-top: 20px;
+        border-bottom: 2px solid black;
+        max-width: 70px;
+    }
+
+    .patisseries__commande{
+        background-color:rgb(197, 184, 184);
+        width: 70vw;
+        margin: auto;
+    }
 
 
 #block__Engagements{
