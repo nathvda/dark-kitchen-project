@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>The Six's Pastry | Boulangerie</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <link id="styleToggle" rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
             <nav class="navbar">
                 <ul>
                     <li class="menuh">
-                        <a href="#">Menu</a>
+                        <a href="#block__Commande">Menu</a>
                     </li>
                     <li class="contacth">
                         <a href="#">Contact</a>
@@ -29,7 +30,7 @@
             </nav>
          
         </div>
-        <button class="darkmode">   
+        <button id="darkmode" class="darkmode">   
         </button>
         <h1>The Six's Pastry</h1>
         <button class="bouton">
@@ -43,31 +44,187 @@
             </div>
             <div class="qui__textes">
                 <h2 class="qui__titre">Qui sommes-nous?</h2>
-                <p class="qui__contenu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis ex neque, quis ullamcorper purus sodales nec. Donec elementum porttitor massa vitae lobortis. Aenean ac fermentum enim. Aenean laoreet dui eu mattis sollicitudin. Ut arcu felis, elementum sit amet enim ac, posuere semper augue. Maecenas tellus risus, dictum ultricies pharetra id, vulputate nec lorem. Curabitur libero magna, porttitor fermentum facilisis id, tincidunt quis diam.</p>
-                <button class="bouton"> <a href="#bloc__Commande"> Commander </a> </button>
+                <p class="qui__contenu">Fondée en 2022, notre patisserie a
+                    profité d'une expérience accélérée dans le monde de la cuisine. 
+                    Notre offre s'est élargie jusqu'à atteindre le nombre affolant de 11 produits.
+                    Préparés à la main dans nos cuisines, ces produits feront le
+                    bonheur des papilles des petits et des grands. Vous ne regretterez pas d'avoir choisir
+                    The Six's Pastry.</p>
+                <button class="bouton"> <a href="#block__Commande"> Commander </a> </button>
             </div>
         </article>
 
         <article id="block__Commande">
             <h2>Passer commande</h2>
+            <p class="filter">Filtres:</p>
             <div class="patisserie_filters">
-                <label for="chocolat">Chocolat</label>
+                
+                <input id="tous" name="patisserie" type="radio" value="" checked>
+                <label for="tous">Tous</label>
+                
                 <input id="chocolat" name="patisserie" type="radio" value="chocolat">
-                <label for="fruits">Aux fruits</label>
+                <label for="chocolat">Chocolat</label>
+                
                 <input id="fruits" name="patisserie" type="radio" value="fruits">
-                <label for="gluten">Sans gluten</label>
+                <label for="fruits">Aux fruits</label>
+                
                 <input id="gluten" name="patisserie" type="radio" value="gluten">
-                <label for="lactose">Sans lactose</label>
+                <label for="gluten">Sans gluten</label>
+                
                 <input id="lactose" name="patisserie" type="radio" value="lactose">
+                <label for="lactose">Sans lactose</label>
             </div>
-            <div class="patisseries__wrapper">
+            <div class="article">
                 <!-- CONTENU DYNAMIQUE -->
+                <section class = "article__carte fruits">
+                    <img class="article__carte" src="./assets/tartelette_fruits_rouges.jpeg" alt="tartelette_fruits_rouge">
+                    <h4 class="article__carte">Tartelette aux fruits rouges</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+               
+                <section class = "article__carte chocolat">
+                    <img class="article__carte" src="./assets/gateau_deux_mousses.jpeg" alt="gateau_deux_mousses">
+                    <h4 class="article__carte">Gâteau aux deux mousses</h4>
+                    <p class = "article__carte">Gâteau composé d’une couche de cake moelleux, d’une couche de mousse au chocolat noir et d'une couche de mousse au chocolat au lait</p>
+                    <p class = "article__carte--prix">15€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte fruits">
+                    <img class="article__carte" src="./assets/feuillete_fraises.jpeg" alt="Feuilleté aux fraises">
+                    <h4 class="article__carte">Feuilleté aux fraises</h4>
+                    <p class = "article__carte">Pièce de pâte feuilletée caramélisée, garnie d'une fine couche de crème pâtissière au citron vert et recouverte de belles fraises.</p>
+                    <p class = "article__carte--prix">17€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte fruits lactose">
+                    <img class="article__carte" src="./assets/tarte_citron.jpeg" alt="tarte_citron">
+                    <h4 class="article__carte">Tarte au citron meringuée</h4>
+                    <p class = "article__carte">Croute garnie de crème à base de citron, et recouverte d’une couche de meringue</p>
+                    <p class = "article__carte--prix">15,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte fruits chocolat">
+                    <img class="article__carte" src="./assets/macarons.jpeg" alt="macarons">
+                    <h4 class="article__carte">Macarons</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte fruits gluten">
+                    <img class="article__carte" src="./assets/cheesecake.jpeg" alt="cheesecake">
+                    <h4 class="article__carte">Cheesecake aux fruits rouges</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte lactose">
+                    <img class="article__carte" src="./assets/gateau_arc_en_ciel.jpeg" alt="arc-en-ciel">
+                    <h4 class="article__carte">Gâteau arc-en-ciel</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte chocolat">
+                    <img class="article__carte" src="./assets/gateau_foret_noire.avif" alt="foret noire">
+                    <h4 class="article__carte">Gâteau forêt noire</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte chocolat">
+                    <img class="article__carte" src="./assets/chocolatines.jpeg" alt="pain au chocolat">
+                    <h4 class="article__carte">Chocolatines</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
+
+                <section class = "article__carte chocolat gluten lactose">
+                    <img class="article__carte" src="./assets/mousse_chocolat.jpeg" alt="mousse au chocolat">
+                    <h4 class="article__carte">Mousse au chocolat</h4>
+                    <p class = "article__carte">Petite tarte aux fruits rouges, pâte sablée et crème pâtissière maison</p>
+                    <p class = "article__carte--prix">3,50€</p>
+                    <!--Cette div contient la zone pour choisir le nombre d'articles à commander, 
+                    avec un moins à gauche, un plus à droite, et le nombre choisi entre les deux--> 
+                    <div class = "article_carte">
+                        <button class = "article__carte--moins">-</button>
+                        <div class = "article__carte--variable"></div>
+                        <button class = "article__carte--plus">+</button>
+                    </div>
+                </section>
             </div>   
             <div class="patisseries__commande">
-                <div id="patisseries__cartPreview">
+                <p class="panier">Résumé du panier</p>
+                <ul id="patisseries__cartPreview">
                     <!-- CONTENU DYNAMIQUE -->
-                </div>
-                <button>Commander</button>
+                </ul>
+                <div id="panier__somme"><span>Total unités:</span><span class="preview__unites"></span>
+                    <span>Prix total:</span><span class="preview__prix"></span></div>
+                <button class="button">
+                <a href="#bloc__Commande"> Commander </a> </button>
             </div>
         </article>
 
@@ -77,52 +234,26 @@
                 <li>
                     <img src="./assets/cake_1.jpg" alt="">
                     <h3>Rapidité</h3>
-                     <p>Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        Voluptatum qui? Nulla animi eius atque
-                        consequuntur!Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!</p>
-                </li>
-                <li>
-                    <img src="./assets/cake_2.jpg" alt="">
-                    <h3>Homemade</h3>
-                     <p>Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!</p>
+                     <p>Un service rapide proposé par nos équipes.
+                        Commandez, et vous pourrez venir récupérer votre 
+                        commande à l'heure indiquée. Nos livraisons sont 
+                    effectuées à vélo afin de préserver l'environnement.</p>
                 </li>
                 <li>
                     <img src="./assets/cake_3.jpg" alt="">
                     <h3>Qualité</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Placeat ducimus fugit, 
-                        atque repellat dicta est natus assumenda!
-                        Saepe, officia quo ipsam consectetur impedit
-                        voluptatum qui? Nulla animi eius atque
-                        consequuntur!</p>
+                    <p>Nos ingrédients 100% frais sont issus du
+                    commerce local dans un souci de qualité et
+                     de respect de l'environnement.</p>
+                </li>
+                <li>
+                    <img src="./assets/cake_2.jpg" alt="">
+                    <h3>Homemade</h3>
+                     <p>Nos produits sont préparés à la main par 
+                        nos pâtissiers certifiés, pour le plus grand plaisir de vos papilles. 
+                        N'hésitez pas à nous informer de vos allergies ou à nous appeler pour
+                        en discuter.
+                     </p>
                 </li>
             </ul>
         </article>
@@ -134,29 +265,29 @@
                 <div>
                     <ul>
                         <h3 class="footer_title_div">Contact</h3>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Conditions de vente</a></li>
+                        <li><a href="#">> Mentions légales</a></li>
+                        <li><a href="#">> Conditions de vente</a></li>
                     </ul>
                 </div>
         
                 <div>
-                    <h3 class="footer_title_div">About US</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Obcaecati ratione quis earum non quidem fugiat maxime? 
-                        Excepturi officia corrupthbhhjjuhiuhuihi incidunt, asperiores ullam accusamus 
-                        eius tenetur voluptate praesentium, necessitatibus blanditiis iste.</p>
+                    <h3 class="footer_title_div">Nous connaitre</h3>
+                    <p>Notre boulangerie/patisserie a été crée il y a 3 ans à Charleroi.
+                        Nous faisons des produits totalement frais. Venez dés à présent dans notre 
+                        magasin pour y jeter un oeil.
+                    </p>
                 </div>
         
                 <div>
-                    <h3 class="footer_title_div">More ?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Accusamus, nam quo. Et modi quisquam commodi saepe expedita cupiditate. 
-                        Maxime voluptatibus accusantium natus nemo neque eaque libero 
-                        exercitationem veritatis iste quaerat.</p>
+                    <h3 class="footer_title_div">Nos horaires</h3>
+                    <p>Horaires et jours de travail</p>
+                    <p>Lundi – fermé</p>
+                    <p>Mardi au samedi 7h à 18h</p>
+                    <p>Dimanche – 7h à 13h</p>
                 </div>
             </div>
     
-            <p class="copyright">Développer avec ❤️ pour BeCode</p>
+            <p class="copyright">Développé avec ❤️ pour BeCode</p>
     </footer>
 </body>
 </html>

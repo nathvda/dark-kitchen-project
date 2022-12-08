@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
+p, label {
+  color: #E5DBD9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +12,13 @@
 body {
   font-size: 18px;
   font-family: "Inter";
-  background-color: #E5DBD9;
+  background-color: #102D4A;
   overflow-x: hidden;
   width: 100vw;
 }
 
 main h2 {
-  color: #553F3F;
+  color: #A16A40;
   font-family: "Berkshire Swash";
   font-size: 2em;
   padding: 0.5em 0.5em;
@@ -24,7 +28,7 @@ main h2 {
   padding: 0.5em;
 }
 #block__Engagements h3 {
-  color: #553F3F;
+  color: #A16A40;
   font-family: "Berkshire Swash";
   font-size: 1.5em;
   padding: 0.5em 0;
@@ -51,7 +55,7 @@ main h2 {
 
 header {
   background-image: url(assets/jr-r-90HdOlGbjck-unsplash.jpg);
-  background-color: #E5DBD9;
+  background-color: #102D4A;
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +63,7 @@ header {
 }
 header h1 {
   font-family: "Berkshire Swash";
-  color: #553F3F;
+  color: #A16A40;
   text-align: center;
 }
 header .navbar {
@@ -75,7 +79,7 @@ header .navbar {
   visibility: hidden;
 }
 header .navbar a {
-  color: #553F3F;
+  color: #A16A40;
   display: block;
   margin: 12px 0;
   padding: 0 25px;
@@ -88,30 +92,32 @@ header .navbar a:hover {
 header .navbar ul {
   list-style-type: none;
 }
-header .darkmode {
-  display: none;
+header .lightmode {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #553F3F;
+  background-color: #A16A40;
   border: 0;
-  border-radius: 2em;
   height: 2em;
   width: 4em;
   position: absolute;
-  top: 2em;
-  right: 6em;
+  right: 8em;
+  top: 2.4em;
+  visibility: visible;
+  flex: none;
+  display: inline-block;
+  background: #0f1224;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
+  border-radius: 100px;
   transition: background 0.3s;
 }
-header .darkmode:before {
-  content: url(./assets/brightness-high.svg);
-  border-radius: 2em;
-  border-radius: 2em;
+header .lightmode:before {
+  content: url(./assets/moon.svg);
   height: 2em;
   width: 2em;
   position: absolute;
-  top: 0.3em;
-  right: 1.9em;
+  top: 0.278rem;
 }
 header .hamburgermenu:focus + .navbar {
   visibility: visible;
@@ -176,7 +182,6 @@ header button {
 .article {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .article__carte img {
@@ -187,20 +192,22 @@ header button {
 }
 
 .article__carte {
-  background-color: rgb(232, 175, 175);
+  background-color: rgb(161, 161, 161);
   margin: 0.556rem;
+  max-width: 11.111rem;
   padding: 0.556rem;
   font-family: "Inter";
   position: relative;
 }
 
 .article__carte.chocolat, .article__carte.fruits, .article__carte.lactose {
+  border: 3px solid #DE3D3D;
   border-radius: 50px;
   padding-bottom: 5em;
 }
 
 .article_carte button {
-  color: #E5DBD9;
+  color: #102D4A;
   height: 30px;
   width: 30px;
   border: none;
@@ -208,18 +215,18 @@ header button {
   border-radius: 100px;
   position: absolute;
   bottom: 2em;
-  left: 9em;
+  left: 4em;
 }
 
 .article_carte button:nth-of-type(2) {
-  color: #E5DBD9;
+  color: #102D4A;
   height: 30px;
   width: 30px;
   border: none;
   background-color: #DE3D3D;
   position: absolute;
   bottom: 2em;
-  left: 14em;
+  left: 9em;
 }
 
 p.article__carte--prix {
@@ -229,17 +236,8 @@ p.article__carte--prix {
 
 .article__carte--variable {
   position: absolute;
-  left: 9em;
+  left: 5.3em;
   bottom: 1.7em;
-}
-
-.article_carte button:hover {
-  background-color: #ec7a7a;
-}
-
-section {
-  border-left: #fff 2px solid;
-  border-right: #fff 2px solid;
 }
 
 #block__Commande {
@@ -254,8 +252,8 @@ section {
 }
 .patisserie_filters label {
   margin-bottom: 1px;
-  background-color: #DE3D3D;
-  color: #E5DBD9;
+  background-color: #937666;
+  color: #102D4A;
   padding: 1em;
   position: relative;
 }
@@ -263,7 +261,7 @@ section {
   opacity: 0;
 }
 .patisserie_filters input[type=radio]:checked + label {
-  background-color: #553F3F;
+  background-color: #A16A40;
 }
 
 .filter {
@@ -275,9 +273,18 @@ section {
 }
 
 .patisseries__commande {
-  background-color: rgb(197, 184, 184);
+  background-color: rgba(200, 200, 200, 0.3);
+  text-align: center;
   border-radius: 0.5em;
-  border: 1px solid #937666;
+  border: 1px solid #000;
+  width: 70vw;
+  margin: auto;
+  padding: 1em;
+}
+.patisseries__commande .panier {
+  font-family: "Berkshire Swash";
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 #patisseries__cartPreview {
@@ -326,18 +333,6 @@ section {
   display: none;
 }
 
-.patisseries__commande {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-top: 20px;
-}
-.patisseries__commande .panier {
-  font-family: "Berkshire Swash";
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
 .button {
   background-color: #DE3D3D;
   border: none;
@@ -355,12 +350,12 @@ section {
 }
 
 .Enlever {
-  background-color: red;
+  background-color: #937666;
   height: 100%;
   cursor: pointer;
   border: none;
   text-align: center;
-  color: #E5DBD9;
+  color: #102D4A;
 }
 
 .Enlever:hover {
@@ -374,18 +369,18 @@ section {
 }
 
 footer {
-  background-color: #553F3F;
+  background-color: #A16A40;
 }
 footer a {
   text-decoration: none;
-  color: #E5DBD9;
+  color: #102D4A;
 }
 
 .footer_title {
   text-align: center;
-  color: #E5DBD9;
+  color: #102D4A;
   font-family: "Berkshire Swash";
-  font-size: 50px;
+  font-size: 40px;
   padding-top: 20px;
 }
 
@@ -397,7 +392,7 @@ footer a {
 }
 
 .footer_div {
-  color: #E5DBD9;
+  color: #102D4A;
   margin-left: 20px;
 }
 .footer_div li {
@@ -409,30 +404,12 @@ footer a {
 
 .copyright {
   text-align: center;
-  color: #E5DBD9;
+  color: #102D4A;
   font-size: 15px;
   padding-top: 20px;
 }
 
 @media screen and (min-width: 900px) {
-  .article__carte {
-    max-width: 12.111rem;
-  }
-  .article_carte button {
-    left: 5em;
-  }
-  .article_carte button:nth-of-type(2) {
-    left: 9em;
-  }
-  .article__carte--variable {
-    bottom: 2.5em;
-    left: 8em;
-  }
-  #darkmode {
-    display: block;
-    right: 8em;
-    top: 2.4em;
-  }
   body {
     scroll-behavior: smooth;
   }
@@ -470,7 +447,7 @@ footer a {
     background: none;
   }
   body header .navbar a {
-    color: #553F3F;
+    color: #A16A40;
     display: block;
     margin: 12px 0;
     padding: 0 25px;
@@ -489,7 +466,7 @@ footer a {
     box-sizing: border-box;
   }
   body header .navbar ul li:first-of-type {
-    background-color: #E5DBD9;
+    background-color: #102D4A;
     border-radius: 100px;
   }
   body header .navbar ul li:last-of-type {
@@ -518,7 +495,7 @@ footer a {
   body .patisserie_filters label {
     margin-bottom: 1px;
     background-color: #DE3D3D;
-    color: #E5DBD9;
+    color: #102D4A;
     padding: 1em;
     position: relative;
     cursor: pointer;
@@ -527,7 +504,7 @@ footer a {
     opacity: 0;
   }
   body .patisserie_filters input[type=radio]:checked + label {
-    background-color: #553F3F;
+    background-color: #A16A40;
   }
   body .filter {
     font-family: "Inter";
@@ -537,7 +514,6 @@ footer a {
     max-width: 70px;
   }
   body .patisseries__commande {
-    background-color: rgb(197, 184, 184);
     width: 70vw;
     margin: auto;
   }
@@ -546,7 +522,7 @@ footer a {
     box-sizing: border-box;
   }
   body #block__Engagements h3 {
-    color: #553F3F;
+    color: #A16A40;
     font-family: "Berkshire Swash";
     font-size: 1.5em;
     padding: 0.5em 0;
@@ -590,17 +566,17 @@ footer a {
     justify-content: center;
   }
   body .footer_title_div {
-    color: #E5DBD9;
+    color: #102D4A;
     padding-bottom: 25px;
     text-transform: uppercase;
     font-weight: "Abril Fatface";
   }
   body .copyright {
-    color: #E5DBD9;
+    color: #102D4A;
     font-size: 20px;
   }
   body .qui {
     display: flex;
     text-align: left;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=darkmode.css.map */

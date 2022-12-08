@@ -1,13 +1,16 @@
-$white : #E5DBD9;
-$chocolate--color : #553F3F;
+$white : #102D4A;
+$chocolate--color : #A16A40;
 $coffee--color: #937666;
-$accent : #DE3D3D ;
+$accent : #DE3D3D;
+$text: #E5DBD9;
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap');
 $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
-
+p, label{
+    color: #E5DBD9;
+}
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +33,6 @@ main {
             padding:0.5em 0.5em;
         }
 }
-
 
 // bloc Engagements
 
@@ -107,42 +109,45 @@ header
         & a:hover
         {
             color: #937666;
-            transform: translateY(5px);
+            transform: translateY(5px)
+
         }
 
         ul
         {
             list-style-type: none;
         }
-
     }
-
-    .darkmode{
-        display:none;
+   
+    .lightmode{
         appearance:none;
         background-color:$chocolate--color;
         border:0;
-        border-radius:2em;
         height:2em;
         width:4em;
         position:absolute;
-        top:2.0em;
-        right:6em;
+        right: 8em;
+        top: 2.4em;
+        visibility:visible;
+        flex: none;
+        display: inline-block;
+        background: #0f1224;
+        border: 1px solid black;
+        box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
+        border-radius: 100px;
         transition: background .3s;
     }
-
-    .darkmode:before{
-        content:url(./assets/brightness-high.svg);
-        border-radius: 2em;
-        border-radius: 2em;
+    
+    .lightmode:before{
+        content: url(./assets/moon.svg);
         height:2em;
         width:2em;
         position: absolute;
-        top: 0.3em;
-        right: 1.90em;
+        top: 0.278rem;
     
     }
-   
+
+    
   .hamburgermenu:focus + .navbar{
     visibility: visible;;
   }
@@ -171,6 +176,7 @@ header
     {
         visibility: hidden;
     }
+
 }
 
 //Qui sommes-nous
@@ -185,8 +191,7 @@ header
         img{
             margin:25px;    
             width : 150px;
-            display: block;        
-        }
+            display: block;        }
     }
     &__titre{
         text-align:left;
@@ -215,11 +220,9 @@ header
         text-transform: uppercase;
     }
 }
-
 .article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .article__carte img{
     width: 8.333rem;
@@ -229,14 +232,16 @@ header
 }
 
 .article__carte{
-    background-color: rgb(232, 175, 175);
+    background-color: rgb(161, 161, 161);
     margin: 0.556rem;
+    max-width: 11.111rem;
     padding: 0.556rem;
     font-family: $general;
     position: relative;   
 }
 
 .article__carte.chocolat, .article__carte.fruits, .article__carte.lactose{
+    border: 3px solid $accent;
     border-radius: 50px;
     padding-bottom: 5em;
 } 
@@ -249,7 +254,7 @@ header
     border-radius: 100px;
     position: absolute;
     bottom: 2em;
-    left: 9em;
+    left: 4em;
 }
 .article_carte button:nth-of-type(2){
     color: $white;
@@ -259,7 +264,7 @@ header
     background-color: $accent;
     position: absolute;
     bottom: 2em;
-    left: 14em;
+    left: 9em;
 }
 p.article__carte--prix{
     display: flex;
@@ -268,141 +273,129 @@ p.article__carte--prix{
 }
 .article__carte--variable{
     position: absolute;
-    left: 9em;
+    left: 5.3em;
     bottom:1.7em;
-}
-
-.article_carte button:hover{
-    background-color: #ec7a7a;
-}
-
-section{
-    border-left: #fff 2px solid;
-    border-right: #fff 2px solid;
 }
 
 // Patisserie
 
 #block__Commande{
-padding:0.5em;
-}
-.patisserie_filters{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 20px;
-
-    label{
-        margin-bottom: 1px;
-        background-color:$accent;
-        color:$white;
-        padding:1em;
-        position:relative;
+    padding:0.5em;
     }
-
-    input[type="radio"]{
-        opacity:0;
-    }
-
-   input[type="radio"]:checked + label {
-        background-color:$chocolate--color;
-    }
-
- 
-}
-
-.filter{
-    font-family: $general;
-    margin-left: 20px;
-    padding-top: 20px;
-    border-bottom: 2px solid black;
-    max-width: 70px;
-}
-
-.patisseries__commande{
-    background-color:rgb(197, 184, 184);
-    border-radius:.5em;
-    border:1px solid $coffee--color;
-}
-
-#patisseries__cartPreview{
-
-    margin:0 1em;
-
-    li{
-        background-color:$white;
-        border:$coffee--color 1px solid;
-        border-width:1px 1px 0px 1px;
-        display:grid;
-        grid-template-columns: 60% 10% 10% 20%;
-        text-align: left;
-        align-items:center;
-        padding-left:2em;
-
-        div{
-            border-left: 1px $coffee--color solid;
-            padding:10px;
-        }
-
-        .Prix{
-            text-align:left;
-
-        }
-
-        .unites{
-            text-align:right;
-        }
-
-    }
-
- 
+    .patisserie_filters{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px;
     
-} 
-
-#panier__somme{
-    margin: 0 1em;
-    display:flex;
-    justify-content: space-around;
-    background-color:$white;
-    border:1px $coffee--color solid;
-
-    span {
-
-        border-right:1px $coffee--color solid;
-        display:block;
+        label{
+            margin-bottom: 1px;
+            background-color:$coffee--color;
+            color:$white;
+            padding:1em;
+            position:relative;
+        }
+    
+        input[type="radio"]{
+            opacity:0;
+        }
+    
+       input[type="radio"]:checked + label {
+            background-color:$chocolate--color;
+        }
+         
+    }
+    
+    .filter{
+        font-family: $general;
+        margin-left: 20px;
+        padding-top: 20px;
+        border-bottom: 2px solid black;
+        max-width: 70px;
+    }
+   
+    .patisseries__commande{
+        background-color:rgba(200, 200, 200, 0.3);
+        text-align:center;
+        border-radius:.5em;
+        border:1px solid #000;
+        width: 70vw;
+        margin: auto;
         padding:1em;
+
+        .panier{
+            font-family: $titres;
+            font-size: 25px;
+            margin-bottom: 20px;
+        
+        }
         
     }
 
-    span:last-of-type {
-
-        border-right:0px $coffee--color solid;
-        display:block;
-        padding:1em;
+    
+    #patisseries__cartPreview{
+    
+        margin:0 1em;
+    
+        li{
+            background-color: $text;
+            border:$coffee--color 1px solid;
+            border-width:1px 1px 0px 1px;
+            display:grid;
+            grid-template-columns: 60% 10% 10% 20%;
+            text-align: left;
+            align-items:center;
+            padding-left:2em;
+    
+            div{
+                border-left: 1px $coffee--color solid;
+                padding:10px;
+            }
+    
+            .Prix{
+                text-align:left;
+    
+            }
+    
+            .unites{
+                text-align:right;
+            }
+    
+        }
+    
+     
         
-    }
-}
-
-.hidePastry{
-    display:none;
-}
-
-//Panier
-
-.patisseries__commande{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 20px;
-
-    .panier{
-        font-family: $titres;
-        font-size: 25px;
-        margin-bottom: 20px;
+    } 
     
+    #panier__somme{
+        margin: 0 1em;
+        display:flex;
+        justify-content: space-around;
+        background-color:$text;
+        border:1px $coffee--color solid;
+    
+        span {
+    
+            border-right:1px $coffee--color solid;
+            display:block;
+            padding:1em;
+            
+        }
+    
+        span:last-of-type {
+    
+            border-right:0px $coffee--color solid;
+            display:block;
+            padding:1em;
+            
+        }
+    }
+
+    .hidePastry{
+        display:none;
     }
     
-}
+    
 
 .button{
     background-color: #DE3D3D;
@@ -422,7 +415,7 @@ padding:0.5em;
 }
 
 .Enlever{
-    background-color: red;
+    background-color: $coffee--color;
     height: 100%;
     cursor: pointer;
     border: none;
@@ -441,7 +434,6 @@ padding:0.5em;
 
 }
 
-
 // Footer
 footer{
     background-color: $chocolate--color;
@@ -456,7 +448,7 @@ footer{
     text-align: center;
     color: $white;
     font-family: $titres;
-    font-size: 50px;
+    font-size: 40px;
     padding-top: 20px;
 }
 
@@ -488,27 +480,7 @@ footer{
 }
 
 @media screen and (min-width:900px){
-.article__carte{
-    max-width: 12.111rem;
-}
 
-.article_carte button{
-    left:5em;
-}
-.article_carte button:nth-of-type(2){
-    left:9em
-}
-.article__carte--variable{
-    bottom: 2.5em;
-    left:8em;
-}
-
-
-#darkmode{
-    display: block;
-    right: 8em;
-    top: 2.4em;
-}
     body {
 scroll-behavior: smooth;
 
@@ -604,7 +576,8 @@ main{
 
 }
 
-// Commande
+
+// Commande 
 
 #block__Commande{
     padding:0.5em;
@@ -645,13 +618,15 @@ main{
     }
 
     .patisseries__commande{
-        background-color:rgb(197, 184, 184);
         width: 70vw;
         margin: auto;
     }
 
 
+
 // Engagements
+
+
 
 #block__Engagements{
 
