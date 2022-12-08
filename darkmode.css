@@ -182,6 +182,7 @@ header button {
 .article {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .article__carte img {

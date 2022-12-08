@@ -223,6 +223,7 @@ header
 .article {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .article__carte img{
     width: 8.333rem;
