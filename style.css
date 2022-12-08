@@ -465,6 +465,11 @@ footer a {
     border-bottom: 2px solid black;
     max-width: 70px;
   }
+  body .patisseries__commande {
+    background-color: rgb(197, 184, 184);
+    width: 70vw;
+    margin: auto;
+  }
   body #block__Engagements {
     padding: 0.5em;
     box-sizing: border-box;
