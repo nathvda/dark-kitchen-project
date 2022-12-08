@@ -46,6 +46,7 @@ function sumCart(){
     for(el of lignes){
 
         let panierPrix = el.querySelector(".Prix").innerHTML;
+        
         let panierUnites = Number(el.querySelector(".Unites").innerHTML);
 
         console.log(panierPrix.slice(0,-1));

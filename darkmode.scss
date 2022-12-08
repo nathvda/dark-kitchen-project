@@ -316,10 +316,10 @@ p.article__carte--prix{
     }
    
     .patisseries__commande{
-        background-color:$chocolate--color;
+        background-color:rgba(200, 200, 200, 0.3);
         text-align:center;
         border-radius:.5em;
-        border:1px solid $coffee--color;
+        border:1px solid #000;
         width: 70vw;
         margin: auto;
         padding:1em;
@@ -619,7 +619,6 @@ main{
     }
 
     .patisseries__commande{
-        background-color:rgb(197, 184, 184);
         width: 70vw;
         margin: auto;
     }
