@@ -118,7 +118,7 @@ header
     }
 
     .darkmode{
-        display:block;
+        display:none;
         appearance:none;
         background-color:$chocolate--color;
         border:0;
@@ -128,7 +128,6 @@ header
         position:absolute;
         top:2.0em;
         right:6em;
-        visibility:visible;
         transition: background .3s;
     }
 
@@ -288,6 +287,9 @@ footer{
 
 @media screen and (min-width:900px){
 
+#darkmode{
+    display: block;
+}
     body {
 scroll-behavior: smooth;
 

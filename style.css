@@ -89,7 +89,7 @@ header .navbar ul {
   list-style-type: none;
 }
 header .darkmode {
-  display: block;
+  display: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -101,7 +101,6 @@ header .darkmode {
   position: absolute;
   top: 2em;
   right: 6em;
-  visibility: visible;
   transition: background 0.3s;
 }
 header .darkmode:before {
@@ -220,6 +219,9 @@ footer a {
 }
 
 @media screen and (min-width: 900px) {
+  #darkmode {
+    display: block;
+  }
   body {
     scroll-behavior: smooth;
   }
