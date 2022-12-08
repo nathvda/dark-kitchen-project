@@ -435,6 +435,36 @@ footer a {
   body main {
     padding: 0.5em 4em;
   }
+  body #block__Commande {
+    padding: 0.5em;
+  }
+  body .patisserie_filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+  }
+  body .patisserie_filters label {
+    margin-bottom: 1px;
+    background-color: #DE3D3D;
+    color: #E5DBD9;
+    padding: 1em;
+    position: relative;
+  }
+  body .patisserie_filters input[type=radio] {
+    opacity: 0;
+  }
+  body .patisserie_filters input[type=radio]:checked + label {
+    background-color: #553F3F;
+  }
+  body .filter {
+    font-family: "Inter";
+    margin-left: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    max-width: 70px;
+  }
   body #block__Engagements {
     padding: 0.5em;
     box-sizing: border-box;

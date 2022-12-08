@@ -46,8 +46,9 @@ function sumCart(){
 function afficherPrixtotal(somme, nombreunites){
 
     // prix
-    let conteneurPrix = document.querySelector(".preview__prix");
+    let conteneurPrix = document.querySelector(".preview__prix");  
     conteneurPrix.innerHTML = `${somme.toFixed(2)}€`;
+
 
     // unités
     let conteneurUnites = document.querySelector(".preview__unites");
@@ -118,5 +119,3 @@ filtreswrap.addEventListener('change', filterPastries);
 for (let listeArticle of listeArticles){
     var bouttons = listeArticle.("button");
 }*/
-
-*/
