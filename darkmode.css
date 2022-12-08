@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap");
+p, label {
+  color: #E5DBD9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +12,13 @@
 body {
   font-size: 18px;
   font-family: "Inter";
-  background-color: #E5DBD9;
+  background-color: #102D4A;
   overflow-x: hidden;
   width: 100vw;
 }
 
 main h2 {
-  color: #553F3F;
+  color: #A16A40;
   font-family: "Berkshire Swash";
   font-size: 2em;
   padding: 0.5em 0.5em;
@@ -24,7 +28,7 @@ main h2 {
   padding: 0.5em;
 }
 #block__Engagements h3 {
-  color: #553F3F;
+  color: #A16A40;
   font-family: "Berkshire Swash";
   font-size: 1.5em;
   padding: 0.5em 0;
@@ -51,7 +55,7 @@ main h2 {
 
 header {
   background-image: url(assets/jr-r-90HdOlGbjck-unsplash.jpg);
-  background-color: #E5DBD9;
+  background-color: #102D4A;
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +63,7 @@ header {
 }
 header h1 {
   font-family: "Berkshire Swash";
-  color: #553F3F;
+  color: #A16A40;
   text-align: center;
 }
 header .navbar {
@@ -75,7 +79,7 @@ header .navbar {
   visibility: hidden;
 }
 header .navbar a {
-  color: #553F3F;
+  color: #A16A40;
   display: block;
   margin: 12px 0;
   padding: 0 25px;
@@ -105,6 +109,33 @@ header .header__nav {
 }
 header button {
   visibility: hidden;
+}
+header .lightmode {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #A16A40;
+  border: 0;
+  height: 2em;
+  width: 4em;
+  position: absolute;
+  top: 2em;
+  right: 6em;
+  visibility: visible;
+  flex: none;
+  display: inline-block;
+  background: #0f1224;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
+  border-radius: 100px;
+  transition: background 0.3s;
+}
+header .lightmode:before {
+  content: url(./assets/moon.svg);
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 5px;
 }
 
 .qui {
@@ -148,125 +179,25 @@ header button {
   text-transform: uppercase;
 }
 
-.article {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.article__carte img {
-  width: 150px;
-  height: 150px;
-}
-
-.article__carte {
-  background-color: rgb(161, 161, 161);
-  margin: 10px;
-  max-width: 200px;
-}
-
-.article_carte button {
-  color: #E5DBD9;
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-color: red;
-}
-
 #block__Commande {
   padding: 0.5em;
 }
 
-.patisserie_filters {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 20px;
-  background-color: rgb(197, 184, 184);
-}
-
-.filter {
-  font-family: "Inter";
-  margin-left: 20px;
-  padding-top: 20px;
-  border-bottom: 2px solid black;
-  max-width: 70px;
-}
-
 .patisseries__commande {
-  background-color: rgb(197, 184, 184);
-}
-
-.hidePastry {
-  display: none;
-}
-
-.panier {
-  font-family: "Berkshire Swash";
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.patisseries__commande {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-top: 20px;
-}
-
-.button {
-  background-color: #DE3D3D;
-  border: none;
-  border-radius: 40px;
-  padding: 15px 35px;
-  margin: 15px;
-  text-align: center;
-  font-size: 0.9em;
-}
-.button a {
-  color: white;
-  font-family: "Abril Fatface";
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.Enlever {
-  background-color: red;
-  height: 25px;
-  width: 100px;
-  cursor: pointer;
-  border-radius: 7px;
-  border: none;
-  text-align: center;
-  color: #E5DBD9;
-}
-
-.Enlever:hover {
-  background-color: rgba(221, 20, 20, 0.815);
-}
-
-.LignePanier {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 10px;
-}
-
-.Prix {
-  margin-left: 40px;
-  margin-right: 40px;
+  background-color: #efefef;
 }
 
 footer {
-  background-color: #553F3F;
+  background-color: #A16A40;
 }
 footer a {
   text-decoration: none;
-  color: #E5DBD9;
+  color: #102D4A;
 }
 
 .footer_title {
   text-align: center;
-  color: #E5DBD9;
+  color: #102D4A;
   font-family: "Berkshire Swash";
   font-size: 40px;
   padding-top: 20px;
@@ -280,7 +211,7 @@ footer a {
 }
 
 .footer_div {
-  color: #E5DBD9;
+  color: #102D4A;
   margin-left: 20px;
 }
 .footer_div li {
@@ -292,7 +223,7 @@ footer a {
 
 .copyright {
   text-align: center;
-  color: #E5DBD9;
+  color: #102D4A;
   font-size: 15px;
   padding-top: 20px;
 }
@@ -335,7 +266,7 @@ footer a {
     background: none;
   }
   body header .navbar a {
-    color: #553F3F;
+    color: #A16A40;
     display: block;
     margin: 12px 0;
     padding: 0 25px;
@@ -354,7 +285,7 @@ footer a {
     box-sizing: border-box;
   }
   body header .navbar ul li:first-of-type {
-    background-color: #E5DBD9;
+    background-color: #102D4A;
     border-radius: 100px;
   }
   body header .navbar ul li:last-of-type {
@@ -375,7 +306,7 @@ footer a {
     box-sizing: border-box;
   }
   body #block__Engagements h3 {
-    color: #553F3F;
+    color: #A16A40;
     font-family: "Berkshire Swash";
     font-size: 1.5em;
     padding: 0.5em 0;
@@ -419,17 +350,17 @@ footer a {
     justify-content: center;
   }
   body .footer_title_div {
-    color: #E5DBD9;
+    color: #102D4A;
     padding-bottom: 25px;
     text-transform: uppercase;
     font-weight: "Abril Fatface";
   }
   body .copyright {
-    color: #E5DBD9;
+    color: #102D4A;
     font-size: 20px;
   }
   body .qui {
     display: flex;
     text-align: left;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=darkmode.css.map */

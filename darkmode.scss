@@ -1,5 +1,5 @@
-$white : #E5DBD9;
-$chocolate--color : #553F3F;
+$white : #102D4A;
+$chocolate--color : #A16A40;
 $coffee--color: #937666;
 $accent : #DE3D3D ;
 
@@ -7,7 +7,9 @@ $accent : #DE3D3D ;
 $titres : "Berkshire Swash";
 $menus : "Abril Fatface";
 $general : "Inter";
-
+p, label{
+    color: #E5DBD9;
+}
 *{
     margin: 0;
     padding: 0;
@@ -144,6 +146,34 @@ header
     {
         visibility: hidden;
     }
+
+    .lightmode{
+        appearance:none;
+        background-color:$chocolate--color;
+        border:0;
+        height:2em;
+        width:4em;
+        position:absolute;
+        top:2.0em;
+        right:6em;
+        visibility:visible;
+        flex: none;
+        display: inline-block;
+        background: #0f1224;
+        border: 1px solid black;
+        box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
+        border-radius: 100px;
+        transition: background .3s;
+    }
+    
+    .lightmode:before{
+        content: url(./assets/moon.svg);
+        height:2em;
+        width:2em;
+        position: absolute;
+        top: 5px;
+    
+    }
 }
 
 //Qui sommes-nous
@@ -188,33 +218,6 @@ header
     }
 }
 
-.article {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.article__carte img{
-    width: 150px;
-    height: 150px;
-}
-
-.article__carte{
-    background-color: rgb(161, 161, 161);
-    margin: 10px;
-    max-width: 200px;
-}
-
-.article_carte button{
-    color: $white;
-    height: 30px;
-    width: 30px;
-    border: none;
-    background-color: red;
-}
-
-
-
-
 
 // Patisserie
 
@@ -222,19 +225,11 @@ header
 padding:0.5em;
 }
 .patisserie_filters{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 20px;
-    background-color: rgb(197, 184, 184);
+
 }
 
-.filter{
-    font-family: $general;
-    margin-left: 20px;
-    padding-top: 20px;
-    border-bottom: 2px solid black;
-    max-width: 70px;
+label{
+
 }
 
 .patisseries__wrapper{
@@ -242,7 +237,7 @@ padding:0.5em;
 }
 
 .patisseries__commande{
-    background-color:rgb(197, 184, 184);
+    background-color:#efefef;
 }
 
 .patisseries__wrapper{
@@ -252,71 +247,6 @@ padding:0.5em;
 .patisseries__cartPreview{
     
 } 
-
-.hidePastry{
-    display:none;
-}
-
-//Panier
-.panier{
-    font-family: $titres;
-    font-size: 25px;
-    margin-bottom: 20px;
-
-}
-
-.patisseries__commande{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 20px;
-}
-
-.button{
-    background-color: #DE3D3D;
-    border: none;
-    border-radius : 40px;
-    padding: 15px 35px;
-    margin : 15px;
-    text-align: center;
-    font-size: 0.9em;
-    a {
-        color:white;
-        font-family: $menus;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-}
-
-.Enlever{
-    background-color: red;
-    height: 25px;
-    width: 100px;
-    cursor: pointer;
-    border-radius: 7px;
-    border: none;
-    text-align: center;
-    color: $white;
-}
-
-.Enlever:hover{
-    background-color: rgba(221, 20, 20, 0.815);
-}
-
-.LignePanier{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-
-}
-
-.Prix{
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 
 // Footer
 footer{
