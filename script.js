@@ -2,7 +2,7 @@
 function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
     let patisserieMenu = document.querySelector(`.article`);
-    let itemsToHide =  patisserieMenu.querySelectorAll(`div`);
+    let itemsToHide =  patisserieMenu.querySelectorAll(`section`);
 
     for (el of itemsToHide){
         
