@@ -112,10 +112,11 @@ filtreswrap.addEventListener('change', filterPastries);
 //Pour tous les articles, créer un évènement pour chaque clic
 //sur les bouttons plus ou moins : mise à jour du panier 
 //avec le nom de l'article, le prix, le nombre d'unités et un boutton supprimer
+/* var listeArticles = document.querySelectorAll("section");
 
 /*var listeArticles = document.querySelectorAll("section");
 for (let listeArticle of listeArticles){
     var bouttons = listeArticle.("button");
-}
+}*/
 
 */

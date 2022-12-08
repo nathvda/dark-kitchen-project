@@ -151,6 +151,7 @@ header button {
 .article {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .article__carte img {
@@ -164,12 +165,30 @@ header button {
   max-width: 200px;
 }
 
+.article_carte {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .article_carte button {
   color: #E5DBD9;
   height: 30px;
   width: 30px;
   border: none;
-  background-color: red;
+  background-color: #DE3D3D;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.article_carte button:hover {
+  background-color: #ec7a7a;
+}
+
+section {
+  height: 46vw;
 }
 
 #block__Commande {
