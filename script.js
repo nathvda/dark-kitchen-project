@@ -32,7 +32,7 @@ function filterPastries() {
     }
 }
 
-displayInCart();
+
 sumCart();
 
 }
@@ -45,13 +45,13 @@ function sumCart(){
 
     for(el of lignes){
 
-        let panierPrix = Number(el.querySelector(".Prix").innerHTML);
+        let panierPrix = el.querySelector(".Prix").innerHTML;
         let panierUnites = Number(el.querySelector(".Unites").innerHTML);
-        console.log(panierPrix);
+
+        console.log(panierPrix.slice(0,-1));
         console.log(nombreUnites);    
         somme += panierPrix; 
         nombreUnites += panierUnites;
-
     }
 
     afficherPrixtotal(somme,nombreUnites);
@@ -123,6 +123,7 @@ function displayInCart(gateau, prix, nb) {
     let panierItem = document.createElement("li");
     let panierItemText = document.createTextNode(gateau);
     
+    
     // Prix
     let panierPrice = document.createElement("div");
     let panierPriceText = document.createTextNode(prix);
@@ -157,6 +158,8 @@ function displayInCart(gateau, prix, nb) {
     panierItem.appendChild(panierUnites);
     panierItem.appendChild(panierButton);
     panierDis.appendChild(panierItem);
+
+    sumCart();
 }
 
 let filtreswrap = document.querySelector('.patisserie_filters');
