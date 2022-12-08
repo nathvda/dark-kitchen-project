@@ -164,6 +164,14 @@ header button {
   max-width: 200px;
 }
 
+.article_carte button {
+  color: #E5DBD9;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: red;
+}
+
 #block__Commande {
   padding: 0.5em;
 }
