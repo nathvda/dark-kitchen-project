@@ -240,6 +240,20 @@ header
     border-radius: 50px;
     padding-bottom: 5em;
 } 
+
+div.article_carte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 10em;
+    margin: auto;
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
 .article_carte button{
     color: $white;
     height: 30px;
@@ -247,7 +261,6 @@ header
     border: none;
     background-color: $accent;
     border-radius: 100px;
-    position: absolute;
     bottom: 2em;
     left: 9em;
 }
@@ -257,7 +270,6 @@ header
     width: 30px;
     border: none;
     background-color: $accent;
-    position: absolute;
     bottom: 2em;
     left: 14em;
 }
@@ -267,7 +279,6 @@ p.article__carte--prix{
 
 }
 .article__carte--variable{
-    position: absolute;
     left: 9em;
     bottom:1.7em;
 }

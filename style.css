@@ -199,6 +199,18 @@ header button {
   padding-bottom: 5em;
 }
 
+div.article_carte {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 10em;
+  margin: auto;
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .article_carte button {
   color: #E5DBD9;
   height: 30px;
@@ -206,7 +218,6 @@ header button {
   border: none;
   background-color: #DE3D3D;
   border-radius: 100px;
-  position: absolute;
   bottom: 2em;
   left: 9em;
 }
@@ -217,7 +228,6 @@ header button {
   width: 30px;
   border: none;
   background-color: #DE3D3D;
-  position: absolute;
   bottom: 2em;
   left: 14em;
 }
@@ -228,7 +238,6 @@ p.article__carte--prix {
 }
 
 .article__carte--variable {
-  position: absolute;
   left: 9em;
   bottom: 1.7em;
 }
