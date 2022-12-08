@@ -26,7 +26,20 @@ function removeItem(question){
 /*function updateFinalPrice(){
     let finalPrice = document.get
 }*/
-    
+// 2 Fonctions pour incrémenter/décrémenter le nombre d'articles
+const decrement = (e) => {
+    let nombre = Number(e.target.nextElementSibling.textContent);
+    if(nombre > 0){
+        nombre -= 1;
+        e.target.nextElementSibling.textContent = `${nombre}`;
+    }
+}
+
+const increment = (e) => {
+    let nombre = Number(e.target.previousElementSibling.textContent);
+    nombre += 1;
+    e.target.previousElementSibling.textContent = `${nombre}`;
+}
 
 // Affiche une ligne dans le résumé du panier.
 function displayInCart() {
@@ -80,9 +93,20 @@ filtreswrap.addEventListener('change', filterPastries);
 //Pour tous les articles, créer un évènement pour chaque clic
 //sur les bouttons plus ou moins : mise à jour du panier 
 //avec le nom de l'article, le prix, le nombre d'unités et un boutton supprimer
-var listeArticles = document.querySelectorAll("section");
+let listeArticles = document.querySelectorAll("section");
+
 for (let listeArticle of listeArticles){
-    var bouttons = listeArticle.("button");
+
+    let bouttonMinus = listeArticle.lastElementChild.firstElementChild;
+    let bouttonPlus = listeArticle.lastElementChild.lastElementChild;
+    //Les deux lignes suivantes servent à initialiser la quantité à 1.
+    //Peut-être pourrait-on le faire directement dans le HTML
+    let nombreArticles = document.createTextNode("0");
+    bouttonMinus.nextElementSibling.appendChild(nombreArticles);
+
+    bouttonMinus.addEventListener('click', decrement);
+    bouttonPlus.addEventListener('click', increment);
+
 }
 
 
