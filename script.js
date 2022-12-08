@@ -133,8 +133,6 @@ filtreswrap.addEventListener('change', filterPastries);
 let listeArticles = document.querySelectorAll("section");
 
 for (let listeArticle of listeArticles){
-    var bouttons = listeArticle("button");
-
 
     let bouttonMinus = listeArticle.lastElementChild.firstElementChild;
     let bouttonPlus = listeArticle.lastElementChild.lastElementChild;

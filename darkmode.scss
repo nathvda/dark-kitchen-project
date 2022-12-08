@@ -171,7 +171,7 @@ header
         height:2em;
         width:2em;
         position: absolute;
-        top: 5px;
+        top: 0.278rem;
     
     }
 }
@@ -217,7 +217,58 @@ header
         text-transform: uppercase;
     }
 }
+.article {
+    display: flex;
+    flex-wrap: wrap;
+}
+.article__carte img{
+    width: 8.333rem;
+    height: 8.333rem;
+    display: flex;
+    margin: auto;
+}
 
+.article__carte{
+    background-color: rgb(161, 161, 161);
+    margin: 0.556rem;
+    max-width: 11.111rem;
+    padding: 0.556rem;
+    font-family: $general;
+    position: relative;   
+
+}
+
+.article__carte.chocolat, .article__carte.fruits{
+    border: 3px solid $accent;
+    border-radius: 50px;
+    padding-bottom: 5em;
+}
+.article_carte button{
+    color: $white;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: $accent;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 1em;
+    left: 3em;
+}
+.article_carte button:nth-of-type(2){
+    color: $white;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: $accent;
+    position: absolute;
+    bottom: 1em;
+    left: 7em;
+}
+p.article__carte--prix{
+    display: flex;
+    justify-content: center;
+
+}
 
 // Patisserie
 
