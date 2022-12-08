@@ -110,6 +110,7 @@ const decrement = (e) => {
             } 
         }
     }
+    sumCart();
 }
 
 const increment = (e) => {
@@ -128,6 +129,8 @@ const increment = (e) => {
             }
         }
     }
+
+    sumCart();
  
 }
 
