@@ -51,7 +51,6 @@ function sumCart(){
         console.log(nombreUnites);    
         somme += panierPrix; 
         nombreUnites += panierUnites;
-
     }
 
     afficherPrixtotal(somme,nombreUnites);
@@ -102,6 +101,7 @@ function displayInCart() {
     // Ligne
     let panierItem = document.createElement("li");
     let panierItemText = document.createTextNode("Gateau");
+    
     
     // Prix
     let panierPrice = document.createElement("div");

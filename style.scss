@@ -297,18 +297,10 @@ padding:0.5em;
     max-width: 70px;
 }
 
-.patisseries__wrapper{
-
-}
-
 .patisseries__commande{
     background-color:rgb(197, 184, 184);
     border-radius:.5em;
     border:1px solid $coffee--color;
-}
-
-.patisseries__wrapper{
-
 }
 
 #patisseries__cartPreview{
@@ -374,18 +366,20 @@ padding:0.5em;
 }
 
 //Panier
-.panier{
-    font-family: $titres;
-    font-size: 25px;
-    margin-bottom: 20px;
-
-}
 
 .patisseries__commande{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
     padding-top: 20px;
+
+    .panier{
+        font-family: $titres;
+        font-size: 25px;
+        margin-bottom: 20px;
+    
+    }
+    
 }
 
 .button{
@@ -475,6 +469,8 @@ footer{
 
 #darkmode{
     display: block;
+    right: 8em;
+    top: 2.4em;
 }
     body {
 scroll-behavior: smooth;
@@ -571,9 +567,11 @@ main{
 
 }
 
+// Commande
 
 #block__Commande{
     padding:0.5em;
+    font-size:13px;
     }
     .patisserie_filters{
         display: flex;
@@ -588,6 +586,7 @@ main{
             color:$white;
             padding:1em;
             position:relative;
+            cursor:pointer;
         }
     
         input[type="radio"]{
@@ -615,6 +614,8 @@ main{
         margin: auto;
     }
 
+
+// Engagements
 
 #block__Engagements{
 

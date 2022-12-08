@@ -1,7 +1,8 @@
 $white : #102D4A;
 $chocolate--color : #A16A40;
 $coffee--color: #937666;
-$accent : #DE3D3D ;
+$accent : #DE3D3D;
+$text: #E5DBD9;
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Satisfy&display=swap');
 $titres : "Berkshire Swash";
@@ -118,6 +119,35 @@ header
         }
     }
    
+    .lightmode{
+        appearance:none;
+        background-color:$chocolate--color;
+        border:0;
+        height:2em;
+        width:4em;
+        position:absolute;
+        right: 8em;
+        top: 2.4em;
+        visibility:visible;
+        flex: none;
+        display: inline-block;
+        background: #0f1224;
+        border: 1px solid black;
+        box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
+        border-radius: 100px;
+        transition: background .3s;
+    }
+    
+    .lightmode:before{
+        content: url(./assets/moon.svg);
+        height:2em;
+        width:2em;
+        position: absolute;
+        top: 0.278rem;
+    
+    }
+
+    
   .hamburgermenu:focus + .navbar{
     visibility: visible;;
   }
@@ -147,33 +177,6 @@ header
         visibility: hidden;
     }
 
-    .lightmode{
-        appearance:none;
-        background-color:$chocolate--color;
-        border:0;
-        height:2em;
-        width:4em;
-        position:absolute;
-        top:2.0em;
-        right:6em;
-        visibility:visible;
-        flex: none;
-        display: inline-block;
-        background: #0f1224;
-        border: 1px solid black;
-        box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
-        border-radius: 100px;
-        transition: background .3s;
-    }
-    
-    .lightmode:before{
-        content: url(./assets/moon.svg);
-        height:2em;
-        width:2em;
-        position: absolute;
-        top: 0.278rem;
-    
-    }
 }
 
 //Qui sommes-nous
@@ -273,22 +276,159 @@ p.article__carte--prix{
 // Patisserie
 
 #block__Commande{
-padding:0.5em;
-}
-.patisserie_filters{
+    padding:0.5em;
+    }
+    .patisserie_filters{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px;
+    
+        label{
+            margin-bottom: 1px;
+            background-color:$coffee--color;
+            color:$white;
+            padding:1em;
+            position:relative;
+        }
+    
+        input[type="radio"]{
+            opacity:0;
+        }
+    
+       input[type="radio"]:checked + label {
+            background-color:$chocolate--color;
+        }
+         
+    }
+    
+    .filter{
+        font-family: $general;
+        margin-left: 20px;
+        padding-top: 20px;
+        border-bottom: 2px solid black;
+        max-width: 70px;
+    }
+   
+    .patisseries__commande{
+        background-color:$chocolate--color;
+        text-align:center;
+        border-radius:.5em;
+        border:1px solid $coffee--color;
+        width: 70vw;
+        margin: auto;
+        padding:1em;
+
+        .panier{
+            font-family: $titres;
+            font-size: 25px;
+            margin-bottom: 20px;
+        
+        }
+        
+    }
+
+    
+    #patisseries__cartPreview{
+    
+        margin:0 1em;
+    
+        li{
+            background-color: $text;
+            border:$coffee--color 1px solid;
+            border-width:1px 1px 0px 1px;
+            display:grid;
+            grid-template-columns: 60% 10% 10% 20%;
+            text-align: left;
+            align-items:center;
+            padding-left:2em;
+    
+            div{
+                border-left: 1px $coffee--color solid;
+                padding:10px;
+            }
+    
+            .Prix{
+                text-align:left;
+    
+            }
+    
+            .unites{
+                text-align:right;
+            }
+    
+        }
+    
+     
+        
+    } 
+    
+    #panier__somme{
+        margin: 0 1em;
+        display:flex;
+        justify-content: space-around;
+        background-color:$text;
+        border:1px $coffee--color solid;
+    
+        span {
+    
+            border-right:1px $coffee--color solid;
+            display:block;
+            padding:1em;
+            
+        }
+    
+        span:last-of-type {
+    
+            border-right:0px $coffee--color solid;
+            display:block;
+            padding:1em;
+            
+        }
+    }
+
+    .hidePastry{
+        display:none;
+    }
+    
+    
+
+.button{
+    background-color: #DE3D3D;
+    border: none;
+    border-radius : 40px;
+    padding: 15px 35px;
+    margin : 15px;
+    text-align: center;
+    font-size: 0.9em;
+    a {
+        color:white;
+        font-family: $menus;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 
 }
 
-label{
-
+.Enlever{
+    background-color: $coffee--color;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    color: $white;
 }
 
-
-.patisseries__commande{
-    background-color:#efefef;
+.Enlever:hover{
+    background-color: rgba(221, 20, 20, 0.815);
 }
 
+.LignePanier{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+}
 
 // Footer
 footer{
@@ -431,6 +571,58 @@ main{
     padding:0.5em 4em;
 
 }
+
+
+// Commande 
+
+#block__Commande{
+    padding:0.5em;
+    }
+    .patisserie_filters{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 20px;
+    
+        label{
+            margin-bottom: 1px;
+            background-color:$accent;
+            color:$white;
+            padding:1em;
+            position:relative;
+            cursor:pointer;
+        }
+    
+        input[type="radio"]{
+            opacity:0;
+        }
+    
+       input[type="radio"]:checked + label {
+            background-color:$chocolate--color;
+        }
+    
+     
+    }
+    
+    .filter{
+        font-family: $general;
+        margin-left: 20px;
+        padding-top: 20px;
+        border-bottom: 2px solid black;
+        max-width: 70px;
+    }
+
+    .patisseries__commande{
+        background-color:rgb(197, 184, 184);
+        width: 70vw;
+        margin: auto;
+    }
+
+
+
+// Engagements
+
 
 
 #block__Engagements{
