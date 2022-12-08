@@ -62,12 +62,20 @@ function removeItem(question){
 /*function updateFinalPrice(){
     let finalPrice = document.get
 }*/
+
 // 2 Fonctions pour incrémenter/décrémenter le nombre d'articles
 const decrement = (e) => {
     let nombre = Number(e.target.nextElementSibling.textContent);
     if(nombre > 0){
         nombre -= 1;
         e.target.nextElementSibling.textContent = `${nombre}`;
+
+        if (nombre == 0){
+            //Supprimer l'article du panier
+        }
+        else{
+            //Décrémenter panierUnitesText 
+        }
     }
 }
 
@@ -75,23 +83,35 @@ const increment = (e) => {
     let nombre = Number(e.target.previousElementSibling.textContent);
     nombre += 1;
     e.target.previousElementSibling.textContent = `${nombre}`;
+    let art = e.target.parentElement.parentElement.children;
+    console.log(art[1]);
+    //if (nombre == 1){
+        displayInCart(art[1].textContent, art[3].textContent, nombre);
+    //}
+    //else {
+
+    //}
+    //if (nombre == 1){
+        //
+    //}
+    //displayInCart()
 }
 
 // Affiche une ligne dans le résumé du panier.
-function displayInCart() {
+function displayInCart(gateau, prix, nb) {
     let panierDis = document.getElementById('patisseries__cartPreview');
     
     // Ligne
     let panierItem = document.createElement("li");
-    let panierItemText = document.createTextNode("Gateau");
+    let panierItemText = document.createTextNode(gateau);
     
     // Prix
     let panierPrice = document.createElement("div");
-    let panierPriceText = document.createTextNode("15.30");
+    let panierPriceText = document.createTextNode(prix);
 
     // Nombre d'unités
     let panierUnites = document.createElement("div");
-    let panierUnitesText = document.createTextNode("5");
+    let panierUnitesText = document.createTextNode(nb);
 
     // Bouton
     let panierButton = document.createElement("button");
