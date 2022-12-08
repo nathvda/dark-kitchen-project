@@ -92,6 +92,33 @@ header .navbar a:hover {
 header .navbar ul {
   list-style-type: none;
 }
+header .lightmode {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #A16A40;
+  border: 0;
+  height: 2em;
+  width: 4em;
+  position: absolute;
+  right: 8em;
+  top: 2.4em;
+  visibility: visible;
+  flex: none;
+  display: inline-block;
+  background: #0f1224;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
+  border-radius: 100px;
+  transition: background 0.3s;
+}
+header .lightmode:before {
+  content: url(./assets/moon.svg);
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 0.278rem;
+}
 header .hamburgermenu:focus + .navbar {
   visibility: visible;
 }
@@ -109,33 +136,6 @@ header .header__nav {
 }
 header button {
   visibility: hidden;
-}
-header .lightmode {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #A16A40;
-  border: 0;
-  height: 2em;
-  width: 4em;
-  position: absolute;
-  top: 2em;
-  right: 6em;
-  visibility: visible;
-  flex: none;
-  display: inline-block;
-  background: #0f1224;
-  border: 1px solid black;
-  box-shadow: 0 1px 4px rgba(213, 222, 233, 0.2);
-  border-radius: 100px;
-  transition: background 0.3s;
-}
-header .lightmode:before {
-  content: url(./assets/moon.svg);
-  height: 2em;
-  width: 2em;
-  position: absolute;
-  top: 0.278rem;
 }
 
 .qui {
@@ -200,7 +200,7 @@ header .lightmode:before {
   position: relative;
 }
 
-.article__carte.chocolat, .article__carte.fruits {
+.article__carte.chocolat, .article__carte.fruits, .article__carte.lactose {
   border: 3px solid #DE3D3D;
   border-radius: 50px;
   padding-bottom: 5em;
@@ -214,8 +214,8 @@ header .lightmode:before {
   background-color: #DE3D3D;
   border-radius: 100px;
   position: absolute;
-  bottom: 1em;
-  left: 3em;
+  bottom: 2em;
+  left: 4em;
 }
 
 .article_carte button:nth-of-type(2) {
@@ -225,8 +225,8 @@ header .lightmode:before {
   border: none;
   background-color: #DE3D3D;
   position: absolute;
-  bottom: 1em;
-  left: 7em;
+  bottom: 2em;
+  left: 9em;
 }
 
 p.article__carte--prix {
@@ -234,12 +234,138 @@ p.article__carte--prix {
   justify-content: center;
 }
 
+.article__carte--variable {
+  position: absolute;
+  left: 5.3em;
+  bottom: 1.7em;
+}
+
 #block__Commande {
   padding: 0.5em;
 }
 
+.patisserie_filters {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+}
+.patisserie_filters label {
+  margin-bottom: 1px;
+  background-color: #937666;
+  color: #102D4A;
+  padding: 1em;
+  position: relative;
+}
+.patisserie_filters input[type=radio] {
+  opacity: 0;
+}
+.patisserie_filters input[type=radio]:checked + label {
+  background-color: #A16A40;
+}
+
+.filter {
+  font-family: "Inter";
+  margin-left: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid black;
+  max-width: 70px;
+}
+
 .patisseries__commande {
-  background-color: #efefef;
+  background-color: #A16A40;
+  text-align: center;
+  border-radius: 0.5em;
+  border: 1px solid #937666;
+  width: 70vw;
+  margin: auto;
+  padding: 1em;
+}
+.patisseries__commande .panier {
+  font-family: "Berkshire Swash";
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#patisseries__cartPreview {
+  margin: 0 1em;
+}
+#patisseries__cartPreview li {
+  background-color: #E5DBD9;
+  border: #937666 1px solid;
+  border-width: 1px 1px 0px 1px;
+  display: grid;
+  grid-template-columns: 60% 10% 10% 20%;
+  text-align: left;
+  align-items: center;
+  padding-left: 2em;
+}
+#patisseries__cartPreview li div {
+  border-left: 1px #937666 solid;
+  padding: 10px;
+}
+#patisseries__cartPreview li .Prix {
+  text-align: left;
+}
+#patisseries__cartPreview li .unites {
+  text-align: right;
+}
+
+#panier__somme {
+  margin: 0 1em;
+  display: flex;
+  justify-content: space-around;
+  background-color: #E5DBD9;
+  border: 1px #937666 solid;
+}
+#panier__somme span {
+  border-right: 1px #937666 solid;
+  display: block;
+  padding: 1em;
+}
+#panier__somme span:last-of-type {
+  border-right: 0px #937666 solid;
+  display: block;
+  padding: 1em;
+}
+
+.hidePastry {
+  display: none;
+}
+
+.button {
+  background-color: #DE3D3D;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 35px;
+  margin: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.button a {
+  color: white;
+  font-family: "Abril Fatface";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.Enlever {
+  background-color: #937666;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  color: #102D4A;
+}
+
+.Enlever:hover {
+  background-color: rgba(221, 20, 20, 0.815);
+}
+
+.LignePanier {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 footer {
@@ -355,6 +481,42 @@ footer a {
   }
   body main {
     padding: 0.5em 4em;
+  }
+  body #block__Commande {
+    padding: 0.5em;
+  }
+  body .patisserie_filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+  }
+  body .patisserie_filters label {
+    margin-bottom: 1px;
+    background-color: #DE3D3D;
+    color: #102D4A;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+  }
+  body .patisserie_filters input[type=radio] {
+    opacity: 0;
+  }
+  body .patisserie_filters input[type=radio]:checked + label {
+    background-color: #A16A40;
+  }
+  body .filter {
+    font-family: "Inter";
+    margin-left: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    max-width: 70px;
+  }
+  body .patisseries__commande {
+    background-color: rgb(197, 184, 184);
+    width: 70vw;
+    margin: auto;
   }
   body #block__Engagements {
     padding: 0.5em;

@@ -300,17 +300,16 @@ section {
   display: none;
 }
 
-.panier {
-  font-family: "Berkshire Swash";
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
 .patisseries__commande {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 20px;
+}
+.patisseries__commande .panier {
+  font-family: "Berkshire Swash";
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -392,6 +391,8 @@ footer a {
 @media screen and (min-width: 900px) {
   #darkmode {
     display: block;
+    right: 8em;
+    top: 2.4em;
   }
   body {
     scroll-behavior: smooth;
@@ -467,6 +468,7 @@ footer a {
   }
   body #block__Commande {
     padding: 0.5em;
+    font-size: 13px;
   }
   body .patisserie_filters {
     display: flex;
@@ -481,6 +483,7 @@ footer a {
     color: #E5DBD9;
     padding: 1em;
     position: relative;
+    cursor: pointer;
   }
   body .patisserie_filters input[type=radio] {
     opacity: 0;
