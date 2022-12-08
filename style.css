@@ -225,6 +225,8 @@ section {
 
 .patisseries__commande {
   background-color: rgb(197, 184, 184);
+  border-radius: 0.5em;
+  border: 1px solid #937666;
 }
 
 #patisseries__cartPreview {
