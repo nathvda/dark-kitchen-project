@@ -188,6 +188,25 @@ header button {
   background-color: rgb(197, 184, 184);
 }
 
+#panier__somme {
+  margin: 1em;
+  display: flex;
+  justify-content: space-around;
+  background-color: #E5DBD9;
+  border-radius: 4px;
+  border: 1px #937666 solid;
+}
+#panier__somme span {
+  border-right: 1px #937666 solid;
+  display: block;
+  padding: 1em;
+}
+#panier__somme span:last-of-type {
+  border-right: 0px #937666 solid;
+  display: block;
+  padding: 1em;
+}
+
 .hidePastry {
   display: none;
 }

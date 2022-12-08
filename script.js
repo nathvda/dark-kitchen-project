@@ -16,17 +16,49 @@ function filterPastries() {
 }
 
 displayInCart();
+sumCart();
 
+}
+
+function sumCart(){
+    let panierDis = document.getElementById('patisseries__cartPreview');
+    let lignes = panierDis.querySelectorAll("li");
+    let somme = 0;
+    let nombreUnites = 0;
+
+    for(el of lignes){
+
+        let panierPrix = Number(el.querySelector(".Prix").innerHTML);
+        let panierUnites = Number(el.querySelector(".Unites").innerHTML);
+        console.log(panierPrix);
+        console.log(nombreUnites);    
+        somme += panierPrix; 
+        nombreUnites += panierUnites;
+
+    }
+
+    afficherPrixtotal(somme,nombreUnites);
+
+
+};
+
+// fonction de prix du panier.
+function afficherPrixtotal(somme, nombreunites){
+
+    // prix
+    let conteneurPrix = document.querySelector(".preview__prix");
+    conteneurPrix.innerHTML = `${somme.toFixed(2)}`;
+
+    // unités
+    let conteneurUnites = document.querySelector(".preview__unites");
+    conteneurUnites.innerHTML = nombreunites;
 }
 
 function removeItem(question){
     question.remove();
+    sumCart();
 }
 
-/*function updateFinalPrice(){
-    let finalPrice = document.get
-}*/
-    
 
 // Affiche une ligne dans le résumé du panier.
 function displayInCart() {
@@ -38,11 +70,11 @@ function displayInCart() {
     
     // Prix
     let panierPrice = document.createElement("div");
-    let panierPriceText = document.createTextNode("Prix");
+    let panierPriceText = document.createTextNode("15.30");
 
     // Nombre d'unités
     let panierUnites = document.createElement("div");
-    let panierUnitesText = document.createTextNode("Unites");
+    let panierUnitesText = document.createTextNode("5");
 
     // Bouton
     let panierButton = document.createElement("button");
@@ -58,7 +90,7 @@ function displayInCart() {
 
     // Évenement de suppression
     panierButton.addEventListener('click', (e) => {
-        removeItem(panierItem)
+        removeItem(panierItem);
     });
 
     panierItem.appendChild(panierItemText);
