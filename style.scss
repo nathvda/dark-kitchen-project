@@ -226,6 +226,7 @@ header
     height: 8.333rem;
     display: flex;
     margin: auto;
+    border-radius:40px;
 }
 
 .article__carte{
@@ -309,6 +310,7 @@ padding:0.5em;
         color:$white;
         padding:1em;
         position:relative;
+        border-radius: 9px;
     }
 
     input[type="radio"]{
@@ -595,8 +597,7 @@ header {
 
                 .caddie
                 {
-                    width:3.5rem;
-                    height:3.5rem;
+                    width:2.5rem;
                     object-fit:cover;
                     visibility: visible;
 
