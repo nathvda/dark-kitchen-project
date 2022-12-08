@@ -130,7 +130,7 @@ header
         top: 2.4em;
         visibility:visible;
         flex: none;
-        display: inline-block;
+        display: none;
         background: #0f1224;
         border: 1px solid black;
         box-shadow: 0 1px 4px rgb(213 222 233 / 20%);
@@ -491,9 +491,28 @@ footer{
     font-size: 15px;
     padding-top: 20px;
 }
+@media screen and (min-width:376px){
+    .article__carte{
+        max-width: 12.111rem;
+    }
+    
+    .article_carte button{
+        left:5em;
+    }
+    .article_carte button:nth-of-type(2){
+        left:9em
+    }
+    .article__carte--variable{
+        bottom: 2.5em;
+        left:8em;
+    }
+    
+}
 
 @media screen and (min-width:900px){
-
+    #darkmode{
+        display: block;
+    }
     body {
 scroll-behavior: smooth;
 

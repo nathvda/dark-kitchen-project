@@ -241,7 +241,6 @@ header
     border-radius: 50px;
     padding-bottom: 5em;
 } 
-
 div.article_carte {
     display: flex;
     flex-direction: row;
@@ -499,7 +498,23 @@ footer{
     font-size: 15px;
     padding-top: 20px;
 }
-
+@media screen and (min-width:376px){
+    .article__carte{
+        max-width: 12.111rem;
+    }
+    
+    .article_carte button{
+        left:5em;
+    }
+    .article_carte button:nth-of-type(2){
+        left:9em
+    }
+    .article__carte--variable{
+        bottom: 2.5em;
+        left:8em;
+    }
+    
+}
 @media screen and (min-width:900px){
 .article__carte{
     max-width: 12.111rem;
