@@ -158,7 +158,8 @@ header
         img{
             margin:25px;    
             width : 150px;
-            display: block;        }
+            display: block;        
+        }
     }
     &__titre{
         text-align:left;
@@ -191,6 +192,7 @@ header
 .article {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .article__carte img{
@@ -204,17 +206,31 @@ header
     max-width: 200px;
 }
 
+.article_carte{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .article_carte button{
     color: $white;
     height: 30px;
     width: 30px;
     border: none;
-    background-color: red;
+    background-color: $accent;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 20px;
 }
 
+.article_carte button:hover{
+    background-color: #ec7a7a;
+}
 
-
-
+section{
+    height: 46vw;
+}
 
 // Patisserie
 
@@ -250,8 +266,33 @@ padding:0.5em;
 }
 
 .patisseries__cartPreview{
-    
-} 
+
+}
+
+#panier__somme{
+    margin:1em;
+    display:flex;
+    justify-content: space-around;
+    background-color:$white;
+    border-radius:4px;
+    border:1px $coffee--color solid;
+
+    span {
+
+        border-right:1px $coffee--color solid;
+        display:block;
+        padding:1em;
+        
+    }
+
+    span:last-of-type {
+
+        border-right:0px $coffee--color solid;
+        display:block;
+        padding:1em;
+        
+    }
+}
 
 .hidePastry{
     display:none;
