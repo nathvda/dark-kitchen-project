@@ -88,17 +88,26 @@ function removeItem(question){
 // 2 Fonctions pour incrémenter/décrémenter le nombre d'articles
 const decrement = (e) => {
     let nombre = Number(e.target.nextElementSibling.textContent);
+    //Si il y a au moins un élément de l'article dans le panier, décrémenter
     if(nombre > 0){
         nombre -= 1;
         e.target.nextElementSibling.textContent = `${nombre}`;
-
+        let verif = document.getElementById('patisseries__cartPreview');
+        //Si on a supprimé le dernier élément de l'article : supprimer l'article du panier
         if (nombre == 0){
-            //Supprimer l'article du panier
-
+            for (let el of verif.children){
+                if(el.firstChild.textContent == e.target.parentElement.parentElement.children[1].textContent){
+                    el.remove();
+                }
+            }
         }
+        //Sinon décrémenter le nombre d'éléments dans le panier
         else{
-            //Décrémenter panierUnitesText 
-            
+            for (let el of verif.children){
+                if(el.firstChild.textContent == e.target.parentElement.parentElement.children[1].textContent){
+                    el.children[1].textContent = `${nombre}`;
+                }
+            } 
         }
     }
 }
@@ -108,29 +117,20 @@ const increment = (e) => {
     nombre += 1;
     e.target.previousElementSibling.textContent = `${nombre}`;
     let art = e.target.parentElement.parentElement.children;
-    //console.log(art[1]);
     if (nombre == 1){
         displayInCart(art[1].textContent, art[3].textContent, nombre);
     }
     else {
         let verif = document.getElementById('patisseries__cartPreview');
         for (let el of verif.children){
-            //console.log(el);
-            //console.log(el.firstChild.textContent);
-            //console.log(e.target.parentElement.parentElement.children[1].textContent);
             if(el.firstChild.textContent == e.target.parentElement.parentElement.children[1].textContent){
-                //console.log(el.children[1].textContent);
                 el.children[1].textContent = `${nombre}`;
             }
         }
     }
-    //}
-    //if (nombre == 1){
-        //
-    //}
-    //displayInCart()
-    sumCart();
+ 
 }
+
 
 // Affiche une ligne dans le résumé du panier.
 function displayInCart(gateau, prix, nb) {
@@ -195,8 +195,7 @@ for (let listeArticle of listeArticles){
 
     let bouttonMinus = listeArticle.lastElementChild.firstElementChild;
     let bouttonPlus = listeArticle.lastElementChild.lastElementChild;
-    //Les deux lignes suivantes servent à initialiser la quantité à 1.
-    //Peut-être pourrait-on le faire directement dans le HTML
+    
     let nombreArticles = document.createTextNode("0");
     bouttonMinus.nextElementSibling.appendChild(nombreArticles);
 
