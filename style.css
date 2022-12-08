@@ -88,6 +88,31 @@ header .navbar a:hover {
 header .navbar ul {
   list-style-type: none;
 }
+header .darkmode {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #553F3F;
+  border: 0;
+  border-radius: 2em;
+  height: 2em;
+  width: 4em;
+  position: absolute;
+  top: 2em;
+  right: 6em;
+  transition: background 0.3s;
+}
+header .darkmode:before {
+  content: url(./assets/brightness-high.svg);
+  border-radius: 2em;
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  top: 0.3em;
+  right: 1.9em;
+}
 header .hamburgermenu:focus + .navbar {
   visibility: visible;
 }
@@ -365,6 +390,9 @@ footer a {
 }
 
 @media screen and (min-width: 900px) {
+  #darkmode {
+    display: block;
+  }
   body {
     scroll-behavior: smooth;
   }

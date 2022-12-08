@@ -31,6 +31,7 @@ main {
         }
 }
 
+
 // bloc Engagements
 
 #block__Engagements{
@@ -106,14 +107,40 @@ header
         & a:hover
         {
             color: #937666;
-            transform: translateY(5px)
-
+            transform: translateY(5px);
         }
 
         ul
         {
             list-style-type: none;
         }
+
+    }
+
+    .darkmode{
+        display:none;
+        appearance:none;
+        background-color:$chocolate--color;
+        border:0;
+        border-radius:2em;
+        height:2em;
+        width:4em;
+        position:absolute;
+        top:2.0em;
+        right:6em;
+        transition: background .3s;
+    }
+
+    .darkmode:before{
+        content:url(./assets/brightness-high.svg);
+        border-radius: 2em;
+        border-radius: 2em;
+        height:2em;
+        width:2em;
+        position: absolute;
+        top: 0.3em;
+        right: 1.90em;
+    
     }
    
   .hamburgermenu:focus + .navbar{
@@ -446,6 +473,9 @@ footer{
 
 @media screen and (min-width:900px){
 
+#darkmode{
+    display: block;
+}
     body {
 scroll-behavior: smooth;
 

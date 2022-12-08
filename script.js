@@ -1,3 +1,20 @@
+let darkmodeBouton = document.getElementById("darkmode");
+
+function turnDark(){
+    let cssTarget = document.getElementById('styleToggle');
+
+   if (darkmodeBouton.classList.contains("darkmode")){
+    darkmodeBouton.classList.remove("darkmode");
+    darkmodeBouton.classList.add("lightmode");
+    cssTarget.href = 'darkmode.css';
+    console.log('clair');
+
+   } else if (darkmodeBouton.classList.contains("lightmode")){
+    darkmodeBouton.classList.remove("lightmode");
+    darkmodeBouton.classList.add("darkmode");
+    cssTarget.href = 'style.css';
+   }
+}
 // Filtre les patisseries
 function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
@@ -144,3 +161,5 @@ for (let listeArticle of listeArticles){
     bouttonMinus.addEventListener('click', decrement);
     bouttonPlus.addEventListener('click', increment);
 }
+
+darkmodeBouton.addEventListener("click", turnDark);
