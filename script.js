@@ -1,3 +1,20 @@
+let darkmodeBouton = document.getElementById("darkmode");
+
+function turnDark(){
+    let cssTarget = document.getElementById('styleToggle');
+
+   if (darkmodeBouton.classList.contains("darkmode")){
+    darkmodeBouton.classList.remove("darkmode");
+    darkmodeBouton.classList.add("lightmode");
+    cssTarget.href = 'darkmode.css';
+    console.log('clair');
+
+   } else if (darkmodeBouton.classList.contains("lightmode")){
+    darkmodeBouton.classList.remove("lightmode");
+    darkmodeBouton.classList.add("darkmode");
+    cssTarget.href = 'style.css';
+   }
+}
 // Filtre les patisseries
 function filterPastries() {
     let filtresPatisserie = document.querySelector('input[name="patisserie"]:checked').value;
@@ -46,8 +63,9 @@ function sumCart(){
 function afficherPrixtotal(somme, nombreunites){
 
     // prix
-    let conteneurPrix = document.querySelector(".preview__prix");
-    conteneurPrix.innerHTML = `${somme.toFixed(2)}`;
+    let conteneurPrix = document.querySelector(".preview__prix");  
+    conteneurPrix.innerHTML = `${somme.toFixed(2)}€`;
+
 
     // unités
     let conteneurUnites = document.querySelector(".preview__unites");
@@ -162,17 +180,6 @@ for (let listeArticle of listeArticles){
 
     bouttonMinus.addEventListener('click', decrement);
     bouttonPlus.addEventListener('click', increment);
-
 }
 
-
-
-
-/*
-<div class="patisseries__commande">
-    <div id="patisseries__cartPreview">
-        <!-- CONTENU DYNAMIQUE -->
-    </div>
-    <button>Commander</button>
-</div>
-</article> */
+darkmodeBouton.addEventListener("click", turnDark);
