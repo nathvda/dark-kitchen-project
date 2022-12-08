@@ -46,19 +46,23 @@ function sumCart(){
     for(el of lignes){
 
         let panierPrix = el.querySelector(".Prix").innerHTML;
+        let panierPrixCut = panierPrix.slice(0,-1);
+        let pricewithDot = panierPrixCut.replace(",", ".");
         
         let panierUnites = Number(el.querySelector(".Unites").innerHTML);
 
-        console.log(panierPrix.slice(0,-1));
         console.log(nombreUnites);    
-        somme += panierPrix; 
+        somme +=  (Number(pricewithDot) * panierUnites);
+        console.log(somme); 
         nombreUnites += panierUnites;
     }
-
+    
     afficherPrixtotal(somme,nombreUnites);
 
 
 };
+
+
 
 // fonction de prix du panier.
 function afficherPrixtotal(somme, nombreunites){
@@ -66,7 +70,6 @@ function afficherPrixtotal(somme, nombreunites){
     // prix
     let conteneurPrix = document.querySelector(".preview__prix");  
     conteneurPrix.innerHTML = `${somme.toFixed(2)}€`;
-
 
     // unités
     let conteneurUnites = document.querySelector(".preview__unites");
@@ -126,6 +129,7 @@ const increment = (e) => {
         //
     //}
     //displayInCart()
+    sumCart();
 }
 
 // Affiche une ligne dans le résumé du panier.
@@ -174,6 +178,8 @@ function displayInCart(gateau, prix, nb) {
 
     sumCart();
 }
+
+
 
 let filtreswrap = document.querySelector('.patisserie_filters');
 
