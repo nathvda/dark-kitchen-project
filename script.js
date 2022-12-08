@@ -47,7 +47,7 @@ function afficherPrixtotal(somme, nombreunites){
 
     // prix
     let conteneurPrix = document.querySelector(".preview__prix");
-    conteneurPrix.innerHTML = `${somme.toFixed(2)}`;
+    conteneurPrix.innerHTML = `${somme.toFixed(2)}€`;
 
     // unités
     let conteneurUnites = document.querySelector(".preview__unites");
@@ -70,7 +70,7 @@ function displayInCart() {
     
     // Prix
     let panierPrice = document.createElement("div");
-    let panierPriceText = document.createTextNode("15.30");
+    let panierPriceText = document.createTextNode(`15.30`);
 
     // Nombre d'unités
     let panierUnites = document.createElement("div");
@@ -112,19 +112,10 @@ filtreswrap.addEventListener('change', filterPastries);
 //Pour tous les articles, créer un évènement pour chaque clic
 //sur les bouttons plus ou moins : mise à jour du panier 
 //avec le nom de l'article, le prix, le nombre d'unités et un boutton supprimer
-var listeArticles = document.querySelectorAll("section");
+
+/*var listeArticles = document.querySelectorAll("section");
 for (let listeArticle of listeArticles){
     var bouttons = listeArticle.("button");
 }
 
-
-
-
-/*
-<div class="patisseries__commande">
-    <div id="patisseries__cartPreview">
-        <!-- CONTENU DYNAMIQUE -->
-    </div>
-    <button>Commander</button>
-</div>
-</article> */
+*/

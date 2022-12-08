@@ -181,7 +181,19 @@ header button {
   flex-direction: column;
   padding: 10px;
   margin: 20px;
-  background-color: rgb(197, 184, 184);
+}
+.patisserie_filters label {
+  margin-bottom: 1px;
+  background-color: #DE3D3D;
+  color: #E5DBD9;
+  padding: 1em;
+  position: relative;
+}
+.patisserie_filters input[type=radio] {
+  opacity: 0;
+}
+.patisserie_filters input[type=radio]:checked + label {
+  background-color: #553F3F;
 }
 
 .filter {
@@ -196,12 +208,35 @@ header button {
   background-color: rgb(197, 184, 184);
 }
 
+#patisseries__cartPreview {
+  margin: 0 1em;
+}
+#patisseries__cartPreview li {
+  background-color: #E5DBD9;
+  border: #937666 1px solid;
+  border-width: 1px 1px 0px 1px;
+  display: grid;
+  grid-template-columns: 60% 10% 10% 20%;
+  text-align: left;
+  align-items: center;
+  padding-left: 2em;
+}
+#patisseries__cartPreview li div {
+  border-left: 1px #937666 solid;
+  padding: 10px;
+}
+#patisseries__cartPreview li .Prix {
+  text-align: left;
+}
+#patisseries__cartPreview li .unites {
+  text-align: right;
+}
+
 #panier__somme {
-  margin: 1em;
+  margin: 0 1em;
   display: flex;
   justify-content: space-around;
   background-color: #E5DBD9;
-  border-radius: 4px;
   border: 1px #937666 solid;
 }
 #panier__somme span {
@@ -250,10 +285,8 @@ header button {
 
 .Enlever {
   background-color: red;
-  height: 25px;
-  width: 100px;
+  height: 100%;
   cursor: pointer;
-  border-radius: 7px;
   border: none;
   text-align: center;
   color: #E5DBD9;
@@ -267,12 +300,6 @@ header button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px;
-}
-
-.Prix {
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 footer {
