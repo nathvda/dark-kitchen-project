@@ -573,6 +573,7 @@ header {
             transition: all .50s ease;
             text-decoration:none;
             font-size:25px;
+
         }
 
         & a:hover
@@ -597,6 +598,8 @@ header {
             li:last-of-type{ 
 
                 margin-left:auto;
+                margin-top: -9px;
+                margin-right: -21px;
 
                 .caddie
                 {

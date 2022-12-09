@@ -522,6 +522,8 @@ footer a {
     transition: all 0.5s ease;
     text-decoration: none;
     font-size: 25px;
+    height: 1.5em;
+    width: auto;
   }
   body header .navbar a:hover {
     color: #937666;
@@ -539,6 +541,8 @@ footer a {
   }
   body header .navbar ul li:last-of-type {
     margin-left: auto;
+    margin-top: -9px;
+    margin-right: -21px;
   }
   body header .navbar ul li:last-of-type .caddie {
     width: 2.5rem;

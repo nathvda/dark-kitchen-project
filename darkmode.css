@@ -513,6 +513,8 @@ footer a {
   }
   body header .navbar ul li:last-of-type {
     margin-left: auto;
+    margin-top: -9px;
+    margin-right: -21px;
   }
   body header .navbar ul li:last-of-type .caddie {
     width: 2.5rem;
