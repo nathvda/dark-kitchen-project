@@ -300,6 +300,7 @@ section {
 
 #patisseries__cartPreview {
   margin: 0 1em;
+  font-size: 14px;
 }
 #patisseries__cartPreview li {
   background-color: #E5DBD9;
@@ -587,12 +588,13 @@ footer a {
   }
   body #patisseries__cartPreview {
     margin: 0;
+    font-size: 18px;
   }
   body .LignePanier {
-    font-size: 14px;
+    font-size: 18px;
   }
   body #panier__somme {
-    font-size: 14px;
+    font-size: 18px;
     margin: 0;
   }
   body #block__Engagements {
