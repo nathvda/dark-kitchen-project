@@ -163,8 +163,6 @@ header
     {   
         width: 15vw;
         display: flex;
-        
-
     }
     
     .header__nav{
@@ -206,7 +204,7 @@ header
 
 //bouton "Commander"
 .bouton{
-    background-color: $accent;
+    background-color:rgb(168, 145, 109);
     border: none;
     border-radius : 40px;
     padding: 15px 35px;
@@ -234,7 +232,7 @@ header
 }
 
 .article__carte{
-    background-color: rgb(161, 161, 161);
+    background-color: rgb(138, 73, 73);
     margin: 0.556rem;
     max-width: 11.111rem;
     padding: 0.556rem;
@@ -243,7 +241,7 @@ header
 }
 
 .article__carte.chocolat, .article__carte.fruits, .article__carte.lactose{
-    border: 3px solid $accent;
+    border: 1px solid black;
     border-radius: 50px;
     padding-bottom: 5em;
 } 
@@ -265,7 +263,7 @@ div.article_carte {
     height: 30px;
     width: 30px;
     border: none;
-    background-color: $accent;
+    background-color: rgb(168, 145, 109);
     border-radius: 100px;
     bottom: 2em;
     left: 4em;
@@ -275,7 +273,7 @@ div.article_carte {
     height: 30px;
     width: 30px;
     border: none;
-    background-color: $accent;
+    background-color: rgb(168, 145, 109);
     bottom: 2em;
     left: 9em;
 }
@@ -342,12 +340,10 @@ p.article__carte--prix{
             margin-bottom: 20px;
         
         }
-        
     }
     
     #patisseries__cartPreview{
         margin:0 1em;
-
     
         li{
             background-color: $text;
@@ -410,7 +406,7 @@ p.article__carte--prix{
     
 
 .button{
-    background-color: #DE3D3D;
+    background-color: rgb(168, 145, 109);
     border: none;
     border-radius : 40px;
     padding: 15px 35px;
@@ -449,10 +445,10 @@ p.article__carte--prix{
 // Footer
 footer{
     background-color: $chocolate--color;
-
+    padding-right: 20px;
     a{
         text-decoration: none;
-        color: $white;
+        color: $text;
     }
 }
 
@@ -491,6 +487,7 @@ footer{
     padding-top: 20px;
 }
 @media screen and (min-width:376px){
+
     .article__carte{
         max-width: 12.111rem;
     }
@@ -504,6 +501,19 @@ footer{
     .article__carte--variable{
         bottom: 2.5em;
         left:8em;
+    }
+
+#patisseries__cartPreview{
+    margin:0;
+}
+
+   .LignePanier{
+        font-size:14px;
+    }
+
+    #panier__somme{
+        font-size:14px;
+        margin:0;
     }
     
 }
@@ -621,7 +631,7 @@ main{
     
         label{
             margin-bottom: 1px;
-            background-color:$accent;
+            background-color:rgb(168, 145, 109);
             color:$white;
             padding:1em;
             position:relative;
@@ -697,6 +707,10 @@ main{
 footer{
     padding-bottom: 20px;
     padding-top: 30px;
+}
+
+footer a {
+    color: $text;
 }
 
 .footer_div{
