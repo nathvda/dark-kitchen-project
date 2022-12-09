@@ -344,6 +344,8 @@ p.article__carte--prix{
     
     #patisseries__cartPreview{
         margin:0 1em;
+        font-size:14px;
+    
     
         li{
             background-color: $text;
@@ -381,7 +383,8 @@ p.article__carte--prix{
         justify-content: space-around;
         background-color:$text;
         border:1px $coffee--color solid;
-    
+        font-size:14px;
+
         span {
     
             border-right:1px $coffee--color solid;
@@ -662,6 +665,13 @@ main{
         margin: auto;
     }
 
+#patisseries__cartPreview{
+    font-size:18px;
+}
+
+#panier__somme{
+    font-size:18px;
+}
 
 
 // Engagements

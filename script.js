@@ -8,13 +8,16 @@ function turnDark(){
     darkmodeBouton.classList.add("lightmode");
     cssTarget.href = 'darkmode.css';
     console.log('clair');
-    localStorage.setItem("darkmode","no");
+    let caddie = document.querySelector(".caddie");
+    console.log(caddie);
+    caddie.src= './assets/caddywhite.svg';
 
    } else if (darkmodeBouton.classList.contains("lightmode")){
     darkmodeBouton.classList.remove("lightmode");
     darkmodeBouton.classList.add("darkmode");
     cssTarget.href = 'style.css';
-    localStorage.setItem("darkmode","yes");
+    let caddie = document.querySelector(".caddie");
+    caddie.src= '/assets/caddy.svg';
    }
 }
 // Filtre les patisseries
