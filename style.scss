@@ -457,6 +457,7 @@ padding:0.5em;
 // Footer
 footer{
     background-color: $chocolate--color;
+    padding-right: 20px;
 
     a{
         text-decoration: none;
@@ -688,10 +689,25 @@ main{
 
     .patisseries__commande{
         background-color:rgb(197, 184, 184);
-        width: 70vw;
+        width: 80vw;
         margin: auto;
+        padding:1em;
     }
 
+    
+#patisseries__cartPreview{
+    margin:0;
+}
+
+   .LignePanier{
+        font-size:14px;
+    }
+
+    #panier__somme{
+        font-size:14px;
+        margin:0;
+    }
+    
 
 // Engagements
 
