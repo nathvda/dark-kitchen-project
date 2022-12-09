@@ -506,12 +506,17 @@ footer{
         left:8em;
     }
 
+#patisseries__cartPreview{
+    margin:0;
+}
+
    .LignePanier{
         font-size:14px;
     }
 
-    .panier__somme{
+    #panier__somme{
         font-size:14px;
+        margin:0;
     }
     
 }
