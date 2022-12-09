@@ -707,6 +707,10 @@ footer{
     padding-top: 30px;
 }
 
+footer a {
+    color: $text;
+}
+
 .footer_div{
     display: flex;
     flex-direction: row;
