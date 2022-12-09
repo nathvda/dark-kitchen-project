@@ -340,6 +340,7 @@ padding:0.5em;
 #patisseries__cartPreview{
 
     margin:0 1em;
+    font-size:14px;
 
     li{
         background-color:$white;
@@ -358,6 +359,7 @@ padding:0.5em;
 
         .Prix{
             text-align:left;
+            
 
         }
 
@@ -377,6 +379,7 @@ padding:0.5em;
     justify-content: space-around;
     background-color:$white;
     border:1px $coffee--color solid;
+    
 
     span {
 
@@ -697,14 +700,15 @@ main{
     
 #patisseries__cartPreview{
     margin:0;
+    font-size:18px;
 }
 
-   .LignePanier{
-        font-size:14px;
-    }
+.LignePanier{
+    font-size:18px;
+}
 
     #panier__somme{
-        font-size:14px;
+        font-size:18px;
         margin:0;
     }
     
