@@ -17,7 +17,7 @@ function turnDark(){
     darkmodeBouton.classList.add("darkmode");
     cssTarget.href = 'style.css';
     let caddie = document.querySelector(".caddie");
-    caddie.src= '/assets/caddy.svg';
+    caddie.src= './assets/caddy.svg';
    }
 }
 // Filtre les patisseries
