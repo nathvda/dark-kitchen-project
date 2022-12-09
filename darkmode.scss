@@ -347,7 +347,6 @@ p.article__carte--prix{
     
     #patisseries__cartPreview{
         margin:0 1em;
-
     
         li{
             background-color: $text;
@@ -491,6 +490,7 @@ footer{
     padding-top: 20px;
 }
 @media screen and (min-width:376px){
+
     .article__carte{
         max-width: 12.111rem;
     }
@@ -504,6 +504,14 @@ footer{
     .article__carte--variable{
         bottom: 2.5em;
         left:8em;
+    }
+
+   .LignePanier{
+        font-size:14px;
+    }
+
+    .panier__somme{
+        font-size:14px;
     }
     
 }

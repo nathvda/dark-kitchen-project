@@ -434,6 +434,12 @@ footer a {
     bottom: 2.5em;
     left: 8em;
   }
+  .LignePanier {
+    font-size: 14px;
+  }
+  .panier__somme {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 900px) {
   #darkmode {
