@@ -66,13 +66,13 @@ header .navbar {
   position: absolute;
   margin: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-family: "Abril Fatface";
   flex-direction: column;
   border-radius: 10px;
   transition: all 0.5s ease;
-  background-color: rgba(255, 255, 255, 0.699);
-  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.89);
+  /* visibility: hidden;*/
 }
 header .navbar a {
   color: #553F3F;
@@ -80,13 +80,19 @@ header .navbar a {
   margin: 12px 0;
   padding: 0 25px;
   transition: all 0.5s ease;
+  text-align: center;
+  height: 10vw;
+  width: 60vw;
+  align-items: center;
+  font-size: 28px;
+  text-decoration: none;
 }
 header .navbar a:hover {
   color: #937666;
   transform: translateY(5px);
 }
 header .navbar ul {
-  list-style-type: none;
+  text-align: center;
 }
 header .darkmode {
   display: none;
@@ -121,6 +127,7 @@ header .caddie {
   visibility: hidden;
 }
 header .hamburger {
+  height: 15vw;
   width: 15vw;
   display: flex;
 }

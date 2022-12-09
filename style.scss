@@ -88,13 +88,13 @@ header
         position: absolute;
         margin: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         font-family: $menus;
         flex-direction: column;
         border-radius: 10px;
         transition: all .50s ease;
-        background-color: rgba(255, 255, 255, 0.699);
-        visibility: hidden;
+        background-color: rgba(255, 255, 255, 0.89);
+       /* visibility: hidden;*/
 
         & a{
             color: $chocolate--color;
@@ -102,6 +102,13 @@ header
             margin: 12px 0;
             padding: 0 25px;
             transition: all .50s ease;
+            text-align: center;
+            height: 10vw;
+            width: 60vw;
+            align-items: center;
+            font-size: 28px;
+            text-decoration: none;
+    
         }
 
         & a:hover
@@ -112,7 +119,7 @@ header
 
         ul
         {
-            list-style-type: none;
+            text-align: center;
         }
 
     }
@@ -156,10 +163,9 @@ header
 
     .hamburger
     {   
+        height: 15vw;
         width: 15vw;
         display: flex;
-        
-
     }
     
     .header__nav{
