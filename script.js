@@ -121,7 +121,7 @@ const increment = (e) => {
     e.target.previousElementSibling.textContent = `${nombre}`;
     let art = e.target.parentElement.parentElement.children;
     if (nombre == 1){
-        displayInCart(art[1].textContent, art[3].textContent, nombre);
+        displayInCart(art[1].textContent, art[3].textContent, nombre, e.target.previousElementSibling);
     }
     else {
         let verif = document.getElementById('patisseries__cartPreview');
@@ -137,7 +137,7 @@ const increment = (e) => {
 
 
 // Affiche une ligne dans le résumé du panier.
-function displayInCart(gateau, prix, nb) {
+function displayInCart(gateau, prix, nb, noeudSup) {
     let panierDis = document.getElementById('patisseries__cartPreview');
     
     // Ligne
@@ -168,6 +168,7 @@ function displayInCart(gateau, prix, nb) {
     // Évenement de suppression
     panierButton.addEventListener('click', (e) => {
         removeItem(panierItem);
+        noeudSup.textContent="0";
     });
 
     panierItem.appendChild(panierItemText);

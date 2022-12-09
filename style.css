@@ -440,6 +440,16 @@ footer a {
     bottom: 2.5em;
     left: 8em;
   }
+  #patisseries__cartPreview {
+    margin: 0;
+  }
+  .LignePanier {
+    font-size: 14px;
+  }
+  #panier__somme {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 @media screen and (min-width: 900px) {
   .article__carte {
@@ -564,8 +574,19 @@ footer a {
   }
   body .patisseries__commande {
     background-color: rgb(197, 184, 184);
-    width: 70vw;
+    width: 80vw;
     margin: auto;
+    padding: 1em;
+  }
+  body #patisseries__cartPreview {
+    margin: 0;
+  }
+  body .LignePanier {
+    font-size: 14px;
+  }
+  body #panier__somme {
+    font-size: 14px;
+    margin: 0;
   }
   body #block__Engagements {
     padding: 0.5em;
